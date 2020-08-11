@@ -1,21 +1,21 @@
 {
     "repo" : [
         {
-            "question" : "Select the statement that best describes the parity method of error detection:",
+            "question" : "When 1100010 is divided by 0101, what will be the decimal remainder?",
             "a": {
-                "choice": "Parity checking is best suited for detecting double-bit errors that occur during the transmission of codes from one location to another.",
+                "choice": "2",
                 "correct": false
             },
             "b": {
-                "choice": "Parity checking is not suitable for detecting single-bit errors in transmitted codes.",
-                "correct": false
-            },
-            "c": {
-                "choice": "Parity checking is best suited for detecting single-bit errors in transmitted codes.",
+                "choice": "3",
                 "correct": true
             },
+            "c": {
+                "choice": "4",
+                "correct": false
+            },
             "d": {
-                "choice": "Parity checking is capable of detecting and correcting errors in transmitted codes",
+                "choice": "6",
                 "correct": false
             }
         },
@@ -58,13 +58,21 @@
             }
         },
         {
-            "question" : "How is odd parity generated differently from even parity?",
+            "question" : "How many basic binary subtraction operations are possible?",
             "a": {
-                "choice": "The first output is inverted",
+                "choice": "4",
                 "correct": false
             },
             "b": {
-                "choice": "The last output is inverted",
+                "choice": "3",
+                "correct": false
+            },
+            "c": {
+                "choice": "2",
+                "correct": false
+            },
+            "d": {
+                "choice": "1",
                 "correct": true
             }
 
@@ -145,21 +153,21 @@
             }
         },
         {
-            "question" : "Show from the truth table how an exclusive-OR gate can be used to invert the data on one input if the other input is a special control function.",
+            "question" : "Adding in binary, the decimal values 26 + 27 will produce a sum of:",
             "a": {
-                "choice": "Using A as the control, when A = 0, X is the same as B. When A = 1, X is the same as B.",
+                "choice": "111010",
                 "correct": false
             },
             "b": {
-                "choice": "Using A as the control, when A = 0, X is the same as B. When A = 1, X is the inverse of B.",
-                "correct": true
-            },
-            "c": {
-                "choice": "Using A as the control, when A = 0, X is the inverse of B. When A = 1, X is the same as B.",
+                "choice": "110110",
                 "correct": false
             },
+            "c": {
+                "choice": "110101",
+                "correct": true
+            },
             "d": {
-                "choice": "Using A as the control, when A = 0, X is the inverse of B. When A = 1, X is the inverse of B.",
+                "choice": "101011",
                 "correct": false
             }
         },
