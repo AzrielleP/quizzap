@@ -1,0 +1,186 @@
+{
+    "repo" : [
+        {
+            "question" : "Select the statement that best describes the parity method of error detection:",
+            "a": {
+                "choice": "Parity checking is best suited for detecting double-bit errors that occur during the transmission of codes from one location to another.",
+                "correct": false
+            },
+            "b": {
+                "choice": "Parity checking is not suitable for detecting single-bit errors in transmitted codes.",
+                "correct": false
+            },
+            "c": {
+                "choice": "Parity checking is best suited for detecting single-bit errors in transmitted codes.",
+                "correct": true
+            },
+            "d": {
+                "choice": "Parity checking is capable of detecting and correcting errors in transmitted codes",
+                "correct": false
+            }
+        },
+        {
+            "question" : "A logic circuit that provides a HIGH output for both inputs HIGH or both inputs LOW is a(n):",
+            "a": {
+                "choice": "Ex-NOR gate",
+                "correct": true
+            },
+            "b": {
+                "choice": "OR gate",
+                "correct": false
+            },
+            "c": {
+                "choice": "Ex-OR gate",
+                "correct": false
+            },
+            "d": {
+                "choice": "NAND gate",
+                "correct": false
+            }
+        },
+        {
+            "question" : "Identify the type of gate from the equation X = A'B + AB'",
+            "a": {
+                "choice": "Ex-NOR gate",
+                "correct": false
+            },
+            "b": {
+                "choice": "OR gate",
+                "correct": false
+            },
+            "c": {
+                "choice": "Ex-OR gate",
+                "correct": true
+            },
+            "d": {
+                "choice": "NAND gate",
+                "correct": false
+            }
+        },
+        {
+            "question" : "How is odd parity generated differently from even parity?",
+            "a": {
+                "choice": "The first output is inverted",
+                "correct": false
+            },
+            "b": {
+                "choice": "The last output is inverted",
+                "correct": true
+            }
+
+        },
+        {
+            "question" : "Parity systems are defined as either________ or ________ and will add an extra ________ to the digital information being transmitted.",
+            "a": {
+                "choice": "positive, negative, byte",
+                "correct": false
+            },
+            "b": {
+                "choice": "odd, even, bit",
+                "correct": true
+            },
+            "c": {
+                "choice": "upper, lower, digit",
+                "correct": false
+            },
+            "d": {
+                "choice": "on, off, decimal",
+                "correct": false
+            }
+
+        },
+        {
+            "question" : "Parity systems are defined as either________ or ________ and will add an extra ________ to the digital information being transmitted.",
+            "a": {
+                "choice": "positive, negative, byte",
+                "correct": false
+            },
+            "b": {
+                "choice": "odd, even, bit",
+                "correct": true
+            },
+            "c": {
+                "choice": "upper, lower, digit",
+                "correct": false
+            },
+            "d": {
+                "choice": "on, off, decimal",
+                "correct": false
+            }
+
+        },
+        {
+            "question" : "Which type of gate can be used to add two bits?",
+            "a": {
+                "choice": "EX-OR",
+                "correct": true
+            },
+            "b": {
+                "choice": "EX-NOR",
+                "correct": false
+            },
+            "c": {
+                "choice": "EX-NAND",
+                "correct": false
+            },
+            "d": {
+                "choice": "NOR",
+                "correct": false
+            }
+
+        },
+        {
+            "question" : "Why is an exclusive-NOR gate also called an equality gate?",
+            "a": {
+                "choice": "The output is false if the inputs are equal.",
+                "correct": false
+            },
+            "b": {
+                "choice": "The output is true if the inputs are opposite.",
+                "correct": true
+            },
+            "c": {
+                "choice": "The output is true if the inputs are equal.",
+                "correct": false
+            }
+        },
+        {
+            "question" : "Show from the truth table how an exclusive-OR gate can be used to invert the data on one input if the other input is a special control function.",
+            "a": {
+                "choice": "Using A as the control, when A = 0, X is the same as B. When A = 1, X is the same as B.",
+                "correct": false
+            },
+            "b": {
+                "choice": "Using A as the control, when A = 0, X is the same as B. When A = 1, X is the inverse of B.",
+                "correct": true
+            },
+            "c": {
+                "choice": "Using A as the control, when A = 0, X is the inverse of B. When A = 1, X is the same as B.",
+                "correct": false
+            },
+            "d": {
+                "choice": "Using A as the control, when A = 0, X is the inverse of B. When A = 1, X is the inverse of B.",
+                "correct": false
+            }
+        },
+        {
+            "question" : "The Ex-NOR is sometimes called the ________.",
+            "a": {
+                "choice": "Parity Gate",
+                "correct": false
+            },
+            "b": {
+                "choice": "Equality Gate",
+                "correct": true
+            },
+            "c": {
+                "choice": "Inverted OR",
+                "correct": false
+            },
+            "d": {
+                "choice": "Parity Gate or the Equality Gate",
+                "correct": false
+            }
+        }
+    ]
+}
