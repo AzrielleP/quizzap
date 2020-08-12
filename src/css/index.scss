@@ -63,8 +63,7 @@ button {
 }
 
 .start,
-.next:focus,
-.next:active .prev:focus,
+.next:active,
 .prev:active {
   background-color: $yellow;
 }
@@ -72,7 +71,8 @@ button {
 .start:hover,
 .next:hover,
 .prev:hover,
-.tryAgain:hover {
+.tryAgain:hover,
+.submit:hover {
   opacity: 0.8;
 }
 
@@ -81,6 +81,10 @@ button {
 .next,
 .prev {
   background-color: $light-blue;
+}
+
+.submit {
+    background-color: $green;
 }
 
 .tryAgain {

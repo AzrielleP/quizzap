@@ -84,8 +84,12 @@ function App() {
         </li>
       </ul>
       <div className="buttonContainer">
-        <button className = "prev" onClick = {handlePrevClick}>Prev</button>
-        <button className= "next" onClick = {handleNextClick}>Next</button>
+      {questionNumber !== 0 ? <button className = "prev" onClick = {handlePrevClick}>Prev</button> : null }
+        
+        {questionNumber + 1 === repo.length ? 
+          <button className= "submit" onClick = {handleNextClick}>Submit</button> : 
+          <button className= "next" onClick = {handleNextClick}>Next</button>
+        }
       </div>  
     </div>
   );
