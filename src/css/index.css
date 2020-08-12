@@ -84,41 +84,41 @@ button {
 }
 
 /* CHOICES */
-.choices-Container {
+.choicesContainer {
   list-style-type: none;
   padding: 0;
 }
-.choices-Container li {
+.choicesContainer li {
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
   -webkit-tap-highlight-color: transparent;
   cursor: pointer;
 }
-.choices-Container li input[type=radio] {
+.choicesContainer li input[type=radio] {
   display: none;
 }
-.choices-Container li input[type=radio]:checked + label {
+.choicesContainer li input[type=radio]:checked + label {
   border: 4px solid #ffb400;
   box-shadow: none;
 }
-.choices-Container li input[type=radio]:checked + label > .choiceLetter {
+.choicesContainer li input[type=radio]:checked + label > .choiceLetter {
   color: #ffb400;
 }
-.choices-Container li label {
+.choicesContainer li label {
   display: flex;
   align-items: center;
   padding: 1.2em 1.5em;
   margin: 0.5em 0;
   cursor: pointer;
 }
-.choices-Container li label p {
+.choicesContainer li label p {
   margin: 0;
 }
-.choices-Container li label .choiceLetter {
+.choicesContainer li label .choiceLetter {
   font-size: 2em;
   font-weight: bold;
   margin-right: 1.2em;
 }
-.choices-Container li label .choiceText {
+.choicesContainer li label .choiceText {
   font-size: 1.2em;
 }
 
@@ -145,13 +145,13 @@ button {
     margin: 4em 7em;
   }
 
-  .choices-Container {
+  .choicesContainer {
     display: grid;
     grid-template-columns: 1fr 1fr;
     column-gap: 1em;
     row-gap: 1em;
   }
-  .choices-Container label {
+  .choicesContainer label {
     margin: 0 !important;
   }
 }
