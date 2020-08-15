@@ -28,7 +28,7 @@ header p {
 
 /* BODY
 ========================== */
-.container {
+#root {
   margin: 2em 1em;
   padding: 2em;
   background-color: white;
@@ -145,7 +145,7 @@ button {
 /* MEDIA QUERIES
 ========================== */
 @media screen and (min-width: 768px) {
-  .container {
+  #root {
     margin: 4em 7em;
   }
 
@@ -160,7 +160,7 @@ button {
   }
 }
 @media screen and (min-width: 1024px) {
-  .container {
+  #root {
     margin: 4em 15vw;
   }
 }
