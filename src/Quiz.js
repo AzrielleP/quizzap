@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import repo from './questions.js';
 
 function Quiz(props) {
@@ -16,33 +16,43 @@ function Quiz(props) {
     setQuestionNumber((previous) => previous + 1);
     setQuestion(repo[questionNumber + 1]);
     setAnswer((previous) => previous.concat(choice));
-    setChoice('');
+    localStorage.setItem(questionNumber, choice);
+    if (localStorage.getItem(questionNumber) === null) {
+      setChoice('')
+    }
+    else {
+      const next = localStorage.getItem(questionNumber + 1);
+      setChoice(next);
+    } 
+    console.log(questionNumber);
+    console.log(answer);
   }
 
   function handlePrevClick(event) {
     event.preventDefault();
     setQuestionNumber((previous) => previous - 1);
     setQuestion(repo[questionNumber - 1]);
+    setAnswer(previous => previous.splice(-1,1));
+    const prev = localStorage.getItem(questionNumber -1);
+    setChoice(prev);
+    console.log(questionNumber);
+    console.log(answer);
   }
 
   function handleSubmit(event) {
     event.preventDefault();
     setAnswer((previous) => previous.concat(choice));
-    calcScore();
   }
 
-  function calcScore() {
-    let score = 0;
-    for (let i = 0; i < repo.length - 1; i++) {
-      if (repo[i][answer[i]].correct) {
-        score++;
-      }
+  useEffect(() => {
+    if (answer.length === repo.length) {
+        props.parentCallback(answer);
+        props.handleResult();
     }
-    return score;
-  }
+  }, [answer])
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form>
       <h1>Question #{questionNumber + 1}</h1>
       <p>{question.question}</p>
       <ul className="choicesContainer">
@@ -111,7 +121,7 @@ function Quiz(props) {
         ) : null}
 
         {questionNumber + 1 === repo.length ? (
-          <button className="submit">Submit</button>
+          <button className="submit" onClick = {handleSubmit}>Submit</button>
         ) : (
           <button className="next" onClick={handleNextClick}>
             Next
