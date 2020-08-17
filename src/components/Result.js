@@ -14,16 +14,14 @@ function Result(props) {
     for (let i = 0; i < repo.length; i++) {
 
       // Check if localStorage for index i has a value.
-      if (i.toString() in localStorage) {
-       if (repo[i][localStorage.getItem(i.toString())].correct) {
+      if (localStorage.getItem(i.toString()) !== 'null') {
+       if (repo[i][localStorage.getItem(i)].correct) {
           score++;
         }
       }
     }
     return score;
   }
-
-  console.log(localStorage.getItem(1));
 
   return (
     <div className="resultsContainer">

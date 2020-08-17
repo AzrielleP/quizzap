@@ -9,7 +9,7 @@ import repo from './questions.js';
 function Quiz(props) {
   const [questionNumber, setQuestionNumber] = useState(0);
   const [question, setQuestion] = useState(repo[questionNumber]);
-  const [choice, setChoice] = useState('');
+  const [choice, setChoice] = useState(null);
 
   function handleChoice(event) {
     setChoice(event.target.value);
