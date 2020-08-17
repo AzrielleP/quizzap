@@ -7,9 +7,9 @@ These states are handed down as props for each component.
 =====================================*/
 
 import React, { useState } from 'react';
-import Intro from './Intro';
-import Quiz from './Quiz';
-import Result from './Result';
+import Intro from './components/Intro';
+import Quiz from './components/Quiz';
+import Result from './components/Result';
 
 function App() {
   const [quiz, setQuiz] = useState(false);
