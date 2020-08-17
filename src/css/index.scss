@@ -84,7 +84,7 @@ button {
 }
 
 .submit {
-    background-color: $green;
+  background-color: $green;
 }
 
 .tryAgain {
@@ -137,18 +137,18 @@ button {
 
 /* RESULTS */
 .resultsContainer {
-    text-align: center;
-    p {
-        margin: 0;
-    }
-    .score {
-        font-size: 4em;
-        font-weight: 700;  
-    }
-    .result {
-        font-size: 2.5em;
-        font-weight: 700;
-    }
+  text-align: center;
+  p {
+    margin: 0;
+  }
+  .score {
+    font-size: 4em;
+    font-weight: 700;
+  }
+  .result {
+    font-size: 2.5em;
+    font-weight: 700;
+  }
 }
 
 /* MEDIA QUERIES
@@ -159,13 +159,13 @@ button {
   }
 
   .choicesContainer {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      column-gap: 1em;
-      row-gap: 1em;
-      label {
-          margin: 0 !important;
-      }
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 1em;
+    row-gap: 1em;
+    label {
+      margin: 0 !important;
+    }
   }
 }
 

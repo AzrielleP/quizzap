@@ -5,8 +5,8 @@ function Result(props) {
   function calcScore() {
     let score = 0;
     for (let i = 0; i < repo.length; i++) {
-      if (props.quizData[i] !== '') {
-        if (repo[i][props.quizData[i]].correct) {
+      if (localStorage.getItem(i) !== '') {
+        if (repo[i][localStorage.getItem(i)].correct) {
           score++;
         }
       }

@@ -1,11 +1,10 @@
-import React, {useState, useEffect} from 'react';
+import React, { useState } from 'react';
 import repo from './questions.js';
 
 function Quiz(props) {
   const [questionNumber, setQuestionNumber] = useState(0);
   const [question, setQuestion] = useState(repo[questionNumber]);
   const [choice, setChoice] = useState('');
-  const [answer, setAnswer] = useState([]);
 
   function handleChoice(event) {
     setChoice(event.target.value);
@@ -15,41 +14,28 @@ function Quiz(props) {
     event.preventDefault();
     setQuestionNumber((previous) => previous + 1);
     setQuestion(repo[questionNumber + 1]);
-    setAnswer((previous) => previous.concat(choice));
     localStorage.setItem(questionNumber, choice);
     if (localStorage.getItem(questionNumber) === null) {
-      setChoice('')
-    }
-    else {
+      setChoice('');
+    } else {
       const next = localStorage.getItem(questionNumber + 1);
       setChoice(next);
-    } 
-    console.log(questionNumber);
-    console.log(answer);
+    }
   }
 
   function handlePrevClick(event) {
     event.preventDefault();
     setQuestionNumber((previous) => previous - 1);
     setQuestion(repo[questionNumber - 1]);
-    setAnswer(previous => previous.splice(-1,1));
-    const prev = localStorage.getItem(questionNumber -1);
+    const prev = localStorage.getItem(questionNumber - 1);
     setChoice(prev);
-    console.log(questionNumber);
-    console.log(answer);
   }
 
   function handleSubmit(event) {
     event.preventDefault();
-    setAnswer((previous) => previous.concat(choice));
+    localStorage.setItem(questionNumber, choice);
+    props.handleResult();
   }
-
-  useEffect(() => {
-    if (answer.length === repo.length) {
-        props.parentCallback(answer);
-        props.handleResult();
-    }
-  }, [answer])
 
   return (
     <form>
@@ -121,7 +107,9 @@ function Quiz(props) {
         ) : null}
 
         {questionNumber + 1 === repo.length ? (
-          <button className="submit" onClick = {handleSubmit}>Submit</button>
+          <button className="submit" onClick={handleSubmit}>
+            Submit
+          </button>
         ) : (
           <button className="next" onClick={handleNextClick}>
             Next

@@ -3,42 +3,37 @@ import Intro from './Intro';
 import Quiz from './Quiz';
 import Result from './Result';
 
-
 function App() {
   const [quiz, setQuiz] = useState(false);
   const [intro, setIntro] = useState(true);
   const [result, setResult] = useState(false);
-  const [quizData, setQuizData] = useState([]);
 
   const handleStartQuiz = (event) => {
     event.preventDefault();
-    setQuiz(previous => !previous);
-    setIntro(previous => !previous);
-  }
+    setQuiz((previous) => !previous);
+    setIntro((previous) => !previous);
+    localStorage.clear();
+  };
 
   const handleResult = () => {
-    setQuiz(previous => !previous);
-    setResult(previous => !previous);
-  }
+    setQuiz((previous) => !previous);
+    setResult((previous) => !previous);
+  };
 
   const handleIntro = (event) => {
     event.preventDefault();
-    setResult(previous => !previous);
-    setIntro(previous => !previous);
-    setQuizData([]);
-  }
-
-  const callback = (data) => {
-    setQuizData(data);
-  }
+    setResult((previous) => !previous);
+    setIntro((previous) => !previous);
+    localStorage.clear();
+  };
 
   return (
     <div>
-      {intro && <Intro handleStartQuiz = {handleStartQuiz}/>}
-      {quiz && <Quiz handleResult = {handleResult} parentCallback = {callback}/>}
-      {result && <Result handleIntro = {handleIntro} quizData = {quizData}/>}
+      {intro && <Intro handleStartQuiz={handleStartQuiz} />}
+      {quiz && <Quiz handleResult={handleResult} />}
+      {result && <Result handleIntro={handleIntro} />}
     </div>
-  )
+  );
 }
 
 export default App;
