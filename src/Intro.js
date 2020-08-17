@@ -1,3 +1,8 @@
+/*=====================================
+Intro is a child component of App. 
+This component contains the instructions and the start button of the quiz.
+=====================================*/
+
 import React from 'react';
 
 function Intro(props) {
