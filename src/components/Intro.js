@@ -8,7 +8,7 @@ import React from 'react';
 function Intro(props) {
   return (
     <div>
-      <h1>Instructions</h1>
+      <h1>Welcome to <span class = "title">Quizzap</span></h1>
       <p>
         Choose the best answer from the choices. To pass, you must get a score
         of at least 80%.

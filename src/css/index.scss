@@ -1,11 +1,20 @@
-$cursive: 'Chilanka', cursive;
-$main-font: 'Open Sans', sans-serif;
-$dark-blue: #0d2c54;
-$light-blue: #00a6ed;
-$yellow: #ffb400;
-$red: #f6511d;
-$green: #7fb800;
-$gray: #efefefdc;
+/* Quizzap Styling */
+
+/* Setting up Variables
+========================== */
+
+// Fonts
+$head-font: 'Raleway', sans-serif;
+$body-font: 'Open Sans', sans-serif;
+
+// Colors
+$black: #151313;
+$black-faded: rgba(21, 19, 19, 0.8);
+$black-ultra-faded: rgba(21, 19, 19, 0.5);
+$gray: #DEE2D6;
+$white: #F3F8F2;
+$peach: #FCB07E;
+$blue: #3581B8;
 
 /* DEFAULTS
 ========================== */
@@ -18,35 +27,19 @@ $gray: #efefefdc;
 body {
   margin: 0;
   padding: 0;
-  background-color: $gray;
-  font-family: $main-font;
-}
-
-/* HEADER
-========================== */
-header {
-  height: 60px;
-  background-color: $dark-blue;
-  p {
-    margin: 0;
-    padding: 0.5em;
-    font: bold 2rem $cursive;
-    color: white;
-  }
+  background-color: $white;
+  font-family: $body-font;
 }
 
 /* BODY
 ========================== */
-#root {
-  margin: 2em 1em;
-  padding: 2em;
-  background-color: white;
-  border-radius: 5px;
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
-}
 
 h1 {
   margin-top: 0;
+  font-family: $head-font;
+  .title {
+    color: $peach;
+  }
 }
 
 /* BUTTONS */
@@ -56,7 +49,7 @@ button {
   outline: none;
   padding: 0.5em;
   margin: 1em 0;
-  font: 1.2em $main-font;
+  font: 1.2em $body-font;
   color: white;
   cursor: pointer;
   -webkit-tap-highlight-color: transparent;
@@ -65,7 +58,7 @@ button {
 .start,
 .next:active,
 .prev:active {
-  background-color: $yellow;
+  background-color: $peach;
 }
 
 .start:hover,
@@ -80,15 +73,15 @@ button {
 .start:active,
 .next,
 .prev {
-  background-color: $light-blue;
+  background-color: $blue;
 }
 
 .submit {
-  background-color: $green;
+  background-color: $blue;
 }
 
 .tryAgain {
-  background-color: $dark-blue;
+  background-color: $peach;
 }
 
 .buttonContainer {
@@ -108,11 +101,11 @@ button {
       display: none;
     }
     input[type='radio']:checked + label {
-      border: 4px solid $yellow;
+      border: 4px solid $blue;
       box-shadow: none;
     }
     input[type='radio']:checked + label > .choiceLetter {
-      color: $yellow;
+      color: $blue;
     }
     label {
       display: flex;
