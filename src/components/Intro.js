@@ -1,6 +1,6 @@
 /*=====================================
 Intro is a child component of App. 
-This component contains the instructions and the start button of the quiz.
+This component enables the user to select the quiz category and start the quiz.
 =====================================*/
 
 import React from 'react';
@@ -11,7 +11,7 @@ function Intro(props) {
       <h1>
         Welcome to <span className="title">Quizzap</span>
       </h1>
-      <p className = "subtext">Answer all questions within the time limit!</p>
+      <p className="subtext">Answer all questions within the time limit!</p>
 
       <div className="selector">
         <p>Category</p>
