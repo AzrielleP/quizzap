@@ -8,18 +8,27 @@ import React from 'react';
 function Intro(props) {
   return (
     <div>
-      <h1>Welcome to <span class = "title">Quizzap</span></h1>
-      <p>
-        Choose the best answer from the choices. To pass, you must get a score
-        of at least 80%.
-      </p>
-      <p>
-        You can always go back to the previous questions to review your answers.
-        When you are done, click <strong>Submit</strong>.
-      </p>
+      <h1>
+        Welcome to <span className="title">Quizzap</span>
+      </h1>
+      <p className = "subtext">Answer all questions within the time limit!</p>
 
-      <button className="next" onClick={props.handleStartQuiz}>
-        Start Quiz
+      <div className="selector">
+        <p>Category</p>
+        <select className="category-selector">
+          <option value="general-knowledge">General Knowledge</option>
+        </select>
+      </div>
+
+      <div className="selector">
+        <p>Difficulty</p>
+        <select className="difficulty-selector">
+          <option value="easy">Easy</option>
+        </select>
+      </div>
+
+      <button className="startQuiz" onClick={props.handleStartQuiz}>
+        Take Quiz
       </button>
     </div>
   );
