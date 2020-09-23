@@ -14,6 +14,7 @@ body {
   padding: 0;
   background-color: #F3F8F2;
   font-family: "Open Sans", sans-serif;
+  color: #151313;
 }
 
 #root {
@@ -52,18 +53,21 @@ h1 .title {
 }
 
 /* BUTTONS */
-.startQuiz {
+button {
   border: none;
   outline: none;
   padding: 0.5em;
-  margin-top: 3em;
+  margin-top: 2em;
   border-radius: 5px;
-  background-color: #3581B8;
-  font: lighter 1.1em "Open Sans", sans-serif;
+  font: 1.1em "Open Sans", sans-serif;
   text-transform: uppercase;
-  color: #F3F8F2;
   cursor: pointer;
   -webkit-tap-highlight-color: transparent;
+}
+
+.startQuiz {
+  color: #F3F8F2;
+  background-color: #3581B8;
 }
 
 .startQuiz:active,
@@ -71,42 +75,42 @@ h1 .title {
   background-color: #28648f;
 }
 
-.startQuiz:hover {
-  opacity: 0.8;
+.next,
+.prev {
+  border: 2px solid #FCB07E;
+  background-color: none;
+  color: #FCB07E;
 }
 
-.start,
 .next:active,
-.prev:active {
+.prev:active,
+.submit,
+.tryAgain {
   background-color: #FCB07E;
+  color: #F3F8F2;
 }
 
-.start:hover,
+.startQuiz:hover,
 .next:hover,
 .prev:hover,
 .tryAgain:hover,
 .submit:hover {
-  opacity: 0.8;
-}
-
-.start:focus,
-.start:active,
-.next,
-.prev {
-  background-color: #3581B8;
-}
-
-.submit {
-  background-color: #3581B8;
-}
-
-.tryAgain {
-  background-color: #FCB07E;
+  opacity: 0.6;
 }
 
 .buttonContainer {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
+}
+
+.questionNumber {
+  font: lighter 0.8em "Open Sans", sans-serif;
+  color: rgba(21, 19, 19, 0.8);
+  text-transform: uppercase;
+}
+
+.question {
+  font: 1.3em "Raleway", sans-serif;
 }
 
 /* CHOICES */
@@ -115,7 +119,6 @@ h1 .title {
   padding: 0;
 }
 .choicesContainer li {
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
   -webkit-tap-highlight-color: transparent;
   cursor: pointer;
 }
@@ -123,29 +126,24 @@ h1 .title {
   display: none;
 }
 .choicesContainer li input[type=radio]:checked + label {
-  border: 4px solid #3581B8;
-  box-shadow: none;
-}
-.choicesContainer li input[type=radio]:checked + label > .choiceLetter {
-  color: #3581B8;
+  background-color: #3581B8;
+  color: #F3F8F2;
 }
 .choicesContainer li label {
   display: flex;
   align-items: center;
-  padding: 1.2em 1.5em;
+  border: 1px solid #DEE2D6;
+  border-radius: 20px;
   margin: 0.5em 0;
+  padding: 0.7em;
+  text-align: center;
   cursor: pointer;
 }
 .choicesContainer li label p {
-  margin: 0;
-}
-.choicesContainer li label .choiceLetter {
-  font-size: 2em;
-  font-weight: bold;
-  margin-right: 1.2em;
+  margin: auto;
 }
 .choicesContainer li label .choiceText {
-  font-size: 1.2em;
+  font-size: 1em;
 }
 
 /* RESULTS */

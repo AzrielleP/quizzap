@@ -53,8 +53,8 @@ function Quiz(props) {
 
   return (
     <form>
-      <h1>Question #{questionNumber + 1}</h1>
-      <p>{question.question}</p>
+      <p className = "questionNumber">Question #{questionNumber + 1}</p>
+      <p className = "question">{question.question}</p>
       <ul className="choicesContainer">
         <li>
           <input
@@ -66,7 +66,6 @@ function Quiz(props) {
             id="a"
           />
           <label htmlFor="a">
-            <p className="choiceLetter">A</p>
             <p className="choiceText">{question.a.choice}</p>
           </label>
         </li>
@@ -80,7 +79,6 @@ function Quiz(props) {
             id="b"
           />
           <label htmlFor="b">
-            <p className="choiceLetter">B</p>
             <p className="choiceText">{question.b.choice}</p>
           </label>
         </li>
@@ -94,7 +92,6 @@ function Quiz(props) {
             id="c"
           />
           <label htmlFor="c">
-            <p className="choiceLetter">C</p>
             <p className="choiceText">{question.c.choice}</p>
           </label>
         </li>
@@ -108,7 +105,6 @@ function Quiz(props) {
             id="d"
           />
           <label htmlFor="d">
-            <p className="choiceLetter">D</p>
             <p className="choiceText">{question.d.choice}</p>
           </label>
         </li>
