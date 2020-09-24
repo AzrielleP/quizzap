@@ -52,6 +52,10 @@ h1 .title {
   font: lighter 0.8em "Open Sans", sans-serif;
 }
 
+.side-svg-container {
+  display: none;
+}
+
 /* BUTTONS */
 button {
   border: none;
@@ -166,22 +170,41 @@ button {
 ========================== */
 @media screen and (min-width: 768px) {
   #root {
-    margin: 4em 7em;
+    margin: 1em;
+    text-align: left;
   }
 
-  .choicesContainer {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    column-gap: 1em;
-    row-gap: 1em;
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
   }
-  .choicesContainer label {
-    margin: 0 !important;
+
+  .content-container h1 {
+    font-size: 3em;
   }
-}
-@media screen and (min-width: 1024px) {
-  #root {
-    margin: 4em 15vw;
+  .content-container .subtext {
+    margin-bottom: 3em;
+    font-size: 1.2em;
+  }
+  .content-container .selector {
+    display: flex;
+    margin: 1em;
+    font-size: 1em;
+  }
+  .content-container .selector p {
+    flex-basis: 10em;
+  }
+  .content-container .selector select {
+    height: 3em;
+    width: 13em;
+    font-size: 1em;
+  }
+
+  .side-svg-container {
+    display: block;
+    margin-left: 1em;
   }
 }
 

@@ -25,8 +25,7 @@ function Result(props) {
 
   return (
     <div className="resultsContainer">
-      <h1>Results</h1>
-      <p>Your result is</p>
+      <p>Your score is</p>
       <p className="score">
         {calcScore()}/{repo.length}
       </p>

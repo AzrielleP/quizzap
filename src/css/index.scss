@@ -68,6 +68,10 @@ h1 {
   }
 }
 
+.side-svg-container {
+  display: none;
+}
+
 /* BUTTONS */
 button {
   border: none;
@@ -185,22 +189,58 @@ button {
 ========================== */
 @media screen and (min-width: 768px) {
   #root {
-    margin: 4em 7em;
+    margin: 1em;
+    text-align: left;
   }
 
-  .choicesContainer {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    column-gap: 1em;
-    row-gap: 1em;
-    label {
-      margin: 0 !important;
+  // Intro
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+  }
+
+  .content-container {
+    h1 {
+      font-size: 3em;
+    }
+    .subtext {
+      margin-bottom: 3em;
+      font-size: 1.2em;
+    }
+    .selector {
+      display: flex;
+      margin: 1em;
+      font-size: 1em;
+      p {
+        flex-basis: 10em;
+      }
+      select {
+        height: 3em;
+        width: 13em;
+        font-size: 1em;
+      }
     }
   }
+
+  .side-svg-container {
+    display: block;
+    margin-left: 1em;
+  }
+
+  // .choicesContainer {
+  //   display: grid;
+  //   grid-template-columns: 1fr 1fr;
+  //   column-gap: 1em;
+  //   row-gap: 1em;
+  //   label {
+  //     margin: 0 !important;
+  //   }
+  // }
 }
 
 @media screen and (min-width: 1024px) {
-  #root {
-    margin: 4em 15vw;
-  }
+
 }
