@@ -189,7 +189,6 @@ button {
 ========================== */
 @media screen and (min-width: 768px) {
   #root {
-    margin: 1em;
     text-align: left;
   }
 
@@ -200,47 +199,51 @@ button {
     align-items: center;
     justify-content: center;
     flex: 1;
-  }
-
-  .content-container {
-    h1 {
-      font-size: 3em;
-    }
-    .subtext {
-      margin-bottom: 3em;
-      font-size: 1.2em;
-    }
-    .selector {
-      display: flex;
-      margin: 1em;
-      font-size: 1em;
-      p {
-        flex-basis: 10em;
+    .content-container {
+      h1 {
+        font-size: 3em;
       }
-      select {
-        height: 3em;
-        width: 13em;
+      .subtext {
+        margin-bottom: 3em;
+        font-size: 1.2em;
+      }
+      .selector {
+        display: flex;
+        margin: 1em;
         font-size: 1em;
+        p {
+          flex-basis: 8em;
+        }
+        select {
+          height: 3em;
+          width: 13em;
+          font-size: 1em;
+        }
       }
+    }
+    .side-svg-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-left: 1.5em;
     }
   }
 
-  .side-svg-container {
-    display: block;
-    margin-left: 1em;
+  // Question
+  .questionNumber {
+    font-size: 1em;
+  }
+  
+  .question {
+    margin-bottom: 2em;
+    font-size: 1.5em;
   }
 
-  // .choicesContainer {
-  //   display: grid;
-  //   grid-template-columns: 1fr 1fr;
-  //   column-gap: 1em;
-  //   row-gap: 1em;
-  //   label {
-  //     margin: 0 !important;
-  //   }
-  // }
-}
-
-@media screen and (min-width: 1024px) {
-
+  .quizProper {
+    margin: 5em;
+    .content-container,
+    .side-svg-container {
+      width: 50%;
+    }
+  }
 }

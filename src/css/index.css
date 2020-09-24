@@ -170,7 +170,6 @@ button {
 ========================== */
 @media screen and (min-width: 768px) {
   #root {
-    margin: 1em;
     text-align: left;
   }
 
@@ -180,31 +179,48 @@ button {
     justify-content: center;
     flex: 1;
   }
-
-  .content-container h1 {
+  .container .content-container h1 {
     font-size: 3em;
   }
-  .content-container .subtext {
+  .container .content-container .subtext {
     margin-bottom: 3em;
     font-size: 1.2em;
   }
-  .content-container .selector {
+  .container .content-container .selector {
     display: flex;
     margin: 1em;
     font-size: 1em;
   }
-  .content-container .selector p {
-    flex-basis: 10em;
+  .container .content-container .selector p {
+    flex-basis: 8em;
   }
-  .content-container .selector select {
+  .container .content-container .selector select {
     height: 3em;
     width: 13em;
     font-size: 1em;
   }
+  .container .side-svg-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 1.5em;
+  }
 
-  .side-svg-container {
-    display: block;
-    margin-left: 1em;
+  .questionNumber {
+    font-size: 1em;
+  }
+
+  .question {
+    margin-bottom: 2em;
+    font-size: 1.5em;
+  }
+
+  .quizProper {
+    margin: 5em;
+  }
+  .quizProper .content-container,
+.quizProper .side-svg-container {
+    width: 50%;
   }
 }
 
