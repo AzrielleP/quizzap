@@ -17,14 +17,14 @@ function Intro(props) {
         <div className="selector">
           <p>Category</p>
           <select className="category-selector">
-            <option value="general-knowledge">General Knowledge</option>
+            <option value="general-knowledge">Logic Circuits</option>
           </select>
         </div>
 
         <div className="selector">
           <p>Difficulty</p>
           <select className="difficulty-selector">
-            <option value="easy">Easy</option>
+            <option value="easy">Medium</option>
           </select>
         </div>
 

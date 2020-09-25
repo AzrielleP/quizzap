@@ -86,6 +86,17 @@ button {
   color: #FCB07E;
 }
 
+.backToMenu {
+  margin-left: 1em;
+  background-color: #DEE2D6;
+  font-weight: bold;
+}
+
+.backToMenu:active,
+.backToMenu:focus {
+  background-color: #b1b4aa;
+}
+
 .next:active,
 .prev:active,
 .submit,
@@ -98,13 +109,20 @@ button {
 .next:hover,
 .prev:hover,
 .tryAgain:hover,
-.submit:hover {
+.submit:hover,
+.backToMenu:hover {
   opacity: 0.6;
 }
 
 .buttonContainer {
   display: flex;
   justify-content: space-between;
+}
+
+.resultButtonContainter {
+  display: flex;
+  justify-content: space-around;
+  font-size: 0.9em;
 }
 
 .questionNumber {

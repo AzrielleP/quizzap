@@ -18,8 +18,9 @@ function App() {
 
   // handleStartQuiz will show the Quiz component.
   const handleStartQuiz = () => {
+    intro ? setIntro((previous) => !previous) : setResult((previous) => !previous);
     setQuiz((previous) => !previous);
-    setIntro((previous) => !previous);
+    
     // Clear localStorage just in case the website refreshes.
     localStorage.clear();
   };
@@ -42,7 +43,7 @@ function App() {
     <div>
       {intro && <Intro handleStartQuiz={handleStartQuiz} />}
       {quiz && <Quiz handleResult={handleResult} />}
-      {result && <Result handleIntro={handleIntro} />}
+      {result && <Result handleIntro={handleIntro} handleStartQuiz={handleStartQuiz} />}
     </div>
   );
 }

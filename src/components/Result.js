@@ -12,10 +12,9 @@ function Result(props) {
   function calcScore() {
     let score = 0;
     for (let i = 0; i < repo.length; i++) {
-
       // Check if localStorage for index i has a value.
       if (localStorage.getItem(i.toString()) !== 'null') {
-       if (repo[i][localStorage.getItem(i)].correct) {
+        if (repo[i][localStorage.getItem(i)].correct) {
           score++;
         }
       }
@@ -30,11 +29,18 @@ function Result(props) {
         {calcScore()}/{repo.length}
       </p>
       <p className="result">
-        {calcScore() >= passingPercent * repo.length ? 'You Passed!' : 'You Failed.'}
+        {calcScore() >= passingPercent * repo.length
+          ? 'You Passed!'
+          : 'You Failed.'}
       </p>
-      <button className="tryAgain" onClick={props.handleIntro}>
-        Try Again
-      </button>
+      <div className="resultButtonContainer">
+        <button className="tryAgain" onClick={props.handleStartQuiz}>
+          Try Again
+        </button>
+        <button className="backToMenu" onClick={props.handleIntro}>
+          Back to Menu
+        </button>
+      </div>
     </div>
   );
 }
