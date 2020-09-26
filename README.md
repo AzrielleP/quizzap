@@ -1,7 +1,7 @@
 # Quizzap
 Quizzap is a quiz application that you can use in your browser.
 
-See the live version [here](azriellep.github.io/quizzap).
+See the live version [here](https://azriellep.github.io/quizzap/).
 
 # Tools / Technologies Used
 - React
