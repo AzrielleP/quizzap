@@ -3,7 +3,7 @@ Quiz is a child component of App and contains the quiz proper.
 It imports all the questions from questions.js.
 =====================================*/
 
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import repo from './questions.js';
 
 function Quiz(props) {
@@ -11,6 +11,7 @@ function Quiz(props) {
   const [question, setQuestion] = useState(repo[questionNumber]);
   const [choice, setChoice] = useState(null);
 
+  /* ===== Handle functions ===== */
   function handleChoice(event) {
     setChoice(event.target.value);
   }
@@ -50,12 +51,6 @@ function Quiz(props) {
     localStorage.setItem(questionNumber, choice);
     props.handleResult();
   }
-
-  useEffect(() => {
-    fetch('https://opentdb.com/api.php?amount=20&category=9&difficulty=easy&type=multiple')
-      .then(response => console.log(response.json()))
-
-  });
 
   return (
     <div className="container quizProper">
