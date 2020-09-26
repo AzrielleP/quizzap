@@ -27,9 +27,9 @@ $blue: #3581B8;
 body {
   margin: 0;
   padding: 0;
-  background-color: $white;
   font-family: $body-font;
   color: $black;
+  background-color: $white;
 }
 
 #root {
@@ -41,9 +41,75 @@ body {
   text-align: center;
 }
 
-/* INTRO
+/* Buttons
 ========================== */
 
+button {
+  border: none;
+  outline: none;
+  padding: 0.5em;
+  margin-top: 2em;
+  border-radius: 5px;
+  font: 1.1em $body-font;
+  text-transform: uppercase;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.startQuiz {
+  color: $white;
+  background-color: $blue;
+}
+
+.startQuiz:active,
+.startQuiz:focus {
+  background-color: #28648f;
+}
+
+.next,
+.prev {
+  border: 2px solid $peach;
+  background-color: $white;
+  color: $peach;
+}
+
+.backToMenu {
+  margin-left: 1em;
+  background-color: $gray;
+  font-weight: bold;
+}
+
+.backToMenu:active,
+.backToMenu:focus {
+  background-color: #b1b4aa;
+}
+
+.next:focus,
+.prev:focus {
+  opacity: 0.8;
+}
+
+.next:active,
+.prev:active,
+.submit,
+.tryAgain {
+  background-color: $peach;
+  color: $white;
+}
+
+.startQuiz:hover,
+.next:hover,
+.prev:hover,
+.tryAgain:hover,
+.submit:hover,
+.backToMenu:hover {
+  opacity: 0.6;
+}
+
+/* Intro Component
+========================== */
+
+// Text
 h1 {
   font-family: $head-font;
   .title {
@@ -72,75 +138,8 @@ h1 {
   display: none;
 }
 
-/* BUTTONS */
-button {
-  border: none;
-  outline: none;
-  padding: 0.5em;
-  margin-top: 2em;
-  border-radius: 5px;
-  font: 1.1em $body-font;
-  text-transform: uppercase;
-  cursor: pointer;
-  -webkit-tap-highlight-color: transparent;
-}
-
-.startQuiz {
-  color: $white;
-  background-color: $blue;
-}
-
-.startQuiz:active,
-.startQuiz:focus {
-  background-color: #28648f;
-}
-
-.next,
-.prev {
-  border: 2px solid $peach;
-  background-color: none;
-  color: $peach;
-}
-
-.backToMenu {
-  margin-left: 1em;
-  background-color: $gray;
-  font-weight: bold;
-}
-
-.backToMenu:active,
-.backToMenu:focus {
-  background-color: #b1b4aa;
-}
-
-.next:active,
-.prev:active,
-.submit,
-.tryAgain {
-  background-color: $peach;
-  color: $white;
-}
-
-.startQuiz:hover,
-.next:hover,
-.prev:hover,
-.tryAgain:hover,
-.submit:hover,
-.backToMenu:hover {
-  opacity: 0.6;
-}
-
-.buttonContainer {
-  display: flex;
-  justify-content: space-between;
-}
-
-.resultButtonContainter {
-  display: flex;
-  justify-content: space-around;
-  font-size: 0.9em;
-}
-
+/* Quiz Component
+========================== */
 
 .questionNumber {
   font: lighter 0.8em $body-font;
@@ -152,7 +151,7 @@ button {
   font: 1.3em $head-font;
 }
 
-/* CHOICES */
+// Choices
 .choicesContainer {
   list-style-type: none;
   padding: 0;
@@ -186,20 +185,35 @@ button {
   }
 }
 
-/* RESULTS */
+.buttonContainer {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Result Component
+========================== */
 .resultsContainer {
   text-align: center;
-  p {
-    margin: 0;
+  p:first-child {
+    margin-bottom: 1em;
+    font-family: $head-font;
+    text-transform: uppercase;
   }
   .score {
-    font-size: 4em;
-    font-weight: 700;
+    display: inline-block;
+    margin: 0;
+    padding: 1em 0.8em;
+    border: 20px solid $blue;
+    border-radius: 50%;
+    font: 700 4em $body-font;
   }
   .result {
-    font-size: 2.5em;
-    font-weight: 700;
+    font: 800 2.5em $head-font
   }
+}
+
+.resultButtonContainer {
+  font-size: 0.9em;
 }
 
 /* MEDIA QUERIES
@@ -209,7 +223,8 @@ button {
     text-align: left;
   }
 
-  // Intro
+  /* Intro Component
+  ========================== */
 
   .container {
     display: flex;
@@ -246,7 +261,8 @@ button {
     }
   }
 
-  // Question
+  /* Quiz Component
+  ========================== */
   .questionNumber {
     font-size: 1em;
   }
