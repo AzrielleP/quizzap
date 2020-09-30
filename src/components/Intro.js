@@ -12,12 +12,12 @@ function Intro(props) {
         <h1>
           Welcome to <span className="title">Quizzap</span>
         </h1>
-        <p className="subtext">Answer all questions within the time limit!</p>
+        <p className="subtext">Answer all questions!</p>
 
         <div className="selector">
           <p>Category</p>
           <select className="category-selector">
-            <option value="general-knowledge">Logic Circuits</option>
+            <option value="logic-circuits">Logic Circuits</option>
           </select>
         </div>
 
