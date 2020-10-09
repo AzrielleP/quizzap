@@ -98,10 +98,11 @@ function Quiz(props) {
     } else {
       return (
         <div className="container quizProper">
-          <Timer handleResult={props.handleResult} />
+          
 
           {/*  QUESTIONS */}
           <form className="content-container">
+            <Timer handleResult={props.handleResult} />
             <p className="questionNumber">Question #{questionNumber + 1}</p>
             <p className="question">
               {question.content[questionNumber].question}
