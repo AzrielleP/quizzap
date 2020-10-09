@@ -10,13 +10,13 @@ function Quiz(props) {
   // States for the quiz itself
   const [questionNumber, setQuestionNumber] = useState(0);
   const [choice, setChoice] = useState(null);
-  const { handleDataFetch, question } = props;
+  const { handleDataFetch, question, category, difficulty } = props;
 
   useEffect(() => {
     const getData = async () => {
       try {
         const data = await fetch(
-          'https://opentdb.com/api.php?amount=20&category=9&difficulty=easy&type=multiple'
+          'https://opentdb.com/api.php?amount=20&category=' + category + '&difficulty=' + difficulty + '&type=multiple'
         );
         const jsonData = await data.json();
 
@@ -126,7 +126,7 @@ function Quiz(props) {
                 );
               })}
             </ul>
-            <div className="buttonContainer">
+            <div className="buttonContainer" style = {{justifyContent: questionNumber === 0 ? 'flex-end' : 'space-between'}}>
               {/* {Hide the Previous button when the user it at question #1.} */}
               {questionNumber !== 0 ? (
                 <button className="prev" onClick={handlePrevClick}>

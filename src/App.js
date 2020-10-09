@@ -16,6 +16,16 @@ function App() {
   const [intro, setIntro] = useState(true);
   const [result, setResult] = useState(false);
   const [question, setQuestion] = useState({ content: [], isLoaded: false });
+  const [category, setCategory] = useState('9'); // Set General Knowledge as the default category.
+  const [difficulty, setDifficulty] = useState('easy'); // Set Easy as the default difficulty.
+
+  const handleQuizCategory = (event) => {
+    setCategory(event.target.value);
+  };
+
+  const handleQuizDifficulty = (event) => {
+    setDifficulty(event.target.value);
+  };
 
   const handleDataFetch = (fetchedData, boolean) => {
     setQuestion({
@@ -54,12 +64,22 @@ function App() {
 
   return (
     <div>
-      {intro && <Intro handleStartQuiz={handleStartQuiz} />}
+      {intro && (
+        <Intro
+          handleStartQuiz={handleStartQuiz}
+          handleQuizCategory={handleQuizCategory}
+          handleQuizDifficulty={handleQuizDifficulty}
+          category={category}
+          difficulty={difficulty}
+        />
+      )}
       {quiz && (
         <Quiz
           handleResult={handleResult}
           handleDataFetch={handleDataFetch}
           question={question}
+          category={category}
+          difficulty = {difficulty}
         />
       )}
       {result && (
