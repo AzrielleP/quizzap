@@ -4,7 +4,7 @@ export default function Timer(props) {
 
   // States for the timer
   const [time, handleTime] = useState({});
-  const [counter, handleCounter] = useState(600);
+  const [counter, handleCounter] = useState(300);
 
   /* ===== Timer Functions ===== */
 
@@ -15,15 +15,10 @@ export default function Timer(props) {
     })
   }
 
-  const resetTime = () => {
-    handleCounter(5);
-  }
-
   useEffect(() => {
-    (counter > 0 && setTimeout(() => handleCounter(counter - 1), 1000)) || props.handleResult();
+    // Start the countdown as soon as the component is mounter. If it reaches 0, automatically go to the Results component.
+    (counter >= 0 && setTimeout(() => handleCounter(counter - 1), 1000)) || props.handleResult();
     formatTime();
-
-    return () => resetTime
     
   }, [counter]);
 
