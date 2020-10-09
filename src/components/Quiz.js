@@ -94,14 +94,17 @@ function Quiz(props) {
 
   const displayQuiz = () => {
     if (!question.isLoaded) {
-      return <p>Loading...</p>;
+      return (
+        <div className = "container">
+          <div className = "loader"></div>
+        </div>
+      
+      );
     } else {
       return (
         <div className="container quizProper">
-          
-
-          {/*  QUESTIONS */}
           <form className="content-container">
+          
             <Timer handleResult={props.handleResult} />
             <p className="questionNumber">Question #{questionNumber + 1}</p>
             <p className="question">
