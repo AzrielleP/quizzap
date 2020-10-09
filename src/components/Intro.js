@@ -7,7 +7,7 @@ import React from 'react';
 
 function Intro(props) {
   return (
-    <div className = "container">
+    <div className="container">
       <div className="content-container">
         <h1>
           Welcome to <span className="title">Quizzap</span>

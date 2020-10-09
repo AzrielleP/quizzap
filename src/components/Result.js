@@ -5,9 +5,8 @@ This component calculates and shows the user's scores.
 
 import React from 'react';
 
-
 function Result(props) {
-  const {handleIntro, handleStartQuiz, question} = props;
+  const { handleIntro, handleStartQuiz, question } = props;
   const passingPercent = 0.8;
 
   function calcScore() {

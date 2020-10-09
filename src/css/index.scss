@@ -11,10 +11,10 @@ $body-font: 'Open Sans', sans-serif;
 $black: #151313;
 $black-faded: rgba(21, 19, 19, 0.8);
 $black-ultra-faded: rgba(21, 19, 19, 0.5);
-$gray: #DEE2D6;
-$white: #F3F8F2;
-$peach: #FCB07E;
-$blue: #3581B8;
+$gray: #dee2d6;
+$white: #f3f8f2;
+$peach: #fcb07e;
+$blue: #3581b8;
 
 /* DEFAULTS
 ========================== */
@@ -156,7 +156,6 @@ h1 {
   list-style-type: none;
   padding: 0;
   li {
-
     -webkit-tap-highlight-color: transparent;
     cursor: pointer;
     input[type='radio'] {
@@ -201,8 +200,19 @@ h1 {
 }
 
 @keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.timer {
+  font-weight: 800;
+  font-size: 1.5em;
+  margin-bottom: 2em;
+  color: $blue;
 }
 
 /* Result Component
@@ -223,7 +233,7 @@ h1 {
     font: 700 4em $body-font;
   }
   .result {
-    font: 800 2.5em $head-font
+    font: 800 2.5em $head-font;
   }
 }
 
@@ -281,7 +291,7 @@ h1 {
   .questionNumber {
     font-size: 1em;
   }
-  
+
   .question {
     margin-bottom: 2em;
     font-size: 1.5em;

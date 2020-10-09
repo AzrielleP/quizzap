@@ -31,8 +31,8 @@ function App() {
       : setResult((previous) => !previous);
     setQuiz((previous) => !previous);
     setQuestion({
-      isLoaded: false
-    })
+      isLoaded: false,
+    });
 
     // Clear localStorage just in case the website refreshes.
     localStorage.clear();
@@ -63,10 +63,11 @@ function App() {
         />
       )}
       {result && (
-        <Result 
-          handleIntro={handleIntro} 
+        <Result
+          handleIntro={handleIntro}
           handleStartQuiz={handleStartQuiz}
-          question = {question} />
+          question={question}
+        />
       )}
     </div>
   );

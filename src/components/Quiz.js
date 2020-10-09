@@ -10,8 +10,7 @@ function Quiz(props) {
   // States for the quiz itself
   const [questionNumber, setQuestionNumber] = useState(0);
   const [choice, setChoice] = useState(null);
-  const {handleDataFetch , question} = props;
-
+  const { handleDataFetch, question } = props;
 
   useEffect(() => {
     const getData = async () => {
@@ -30,7 +29,6 @@ function Quiz(props) {
         });
 
         handleDataFetch(jsonData.results, true);
-      
       } catch (err) {
         return (
           <p>
@@ -95,16 +93,14 @@ function Quiz(props) {
   const displayQuiz = () => {
     if (!question.isLoaded) {
       return (
-        <div className = "container">
-          <div className = "loader"></div>
+        <div className="container">
+          <div className="loader"></div>
         </div>
-      
       );
     } else {
       return (
         <div className="container quizProper">
           <form className="content-container">
-          
             <Timer handleResult={props.handleResult} />
             <p className="questionNumber">Question #{questionNumber + 1}</p>
             <p className="question">
