@@ -14,7 +14,7 @@ body {
   padding: 0;
   font-family: "Open Sans", sans-serif;
   color: #151313;
-  background-color: #F3F8F2;
+  background-color: #f3f8f2;
 }
 
 #root {
@@ -41,8 +41,8 @@ button {
 }
 
 .startQuiz {
-  color: #F3F8F2;
-  background-color: #3581B8;
+  color: #f3f8f2;
+  background-color: #3581b8;
 }
 
 .startQuiz:active,
@@ -52,14 +52,14 @@ button {
 
 .next,
 .prev {
-  border: 2px solid #FCB07E;
-  background-color: #F3F8F2;
-  color: #FCB07E;
+  border: 2px solid #fcb07e;
+  background-color: #f3f8f2;
+  color: #fcb07e;
 }
 
 .backToMenu {
   margin-left: 1em;
-  background-color: #DEE2D6;
+  background-color: #dee2d6;
   font-weight: bold;
 }
 
@@ -77,8 +77,8 @@ button {
 .prev:active,
 .submit,
 .tryAgain {
-  background-color: #FCB07E;
-  color: #F3F8F2;
+  background-color: #fcb07e;
+  color: #f3f8f2;
 }
 
 .startQuiz:hover,
@@ -96,7 +96,7 @@ h1 {
   font-family: "Raleway", sans-serif;
 }
 h1 .title {
-  color: #FCB07E;
+  color: #fcb07e;
 }
 
 .subtext {
@@ -112,7 +112,7 @@ h1 .title {
   outline: none;
   width: 16em;
   padding: 0.5em;
-  border: 0.5px solid #DEE2D6;
+  border: 0.5px solid #dee2d6;
   font: lighter 0.8em "Open Sans", sans-serif;
 }
 
@@ -144,13 +144,13 @@ h1 .title {
   display: none;
 }
 .choicesContainer li input[type=radio]:checked + label {
-  background-color: #3581B8;
-  color: #F3F8F2;
+  background-color: #3581b8;
+  color: #f3f8f2;
 }
 .choicesContainer li label {
   display: flex;
   align-items: center;
-  border: 1px solid #DEE2D6;
+  border: 1px solid #dee2d6;
   border-radius: 20px;
   margin: 0.5em 0;
   padding: 0.7em;
@@ -169,6 +169,33 @@ h1 .title {
   justify-content: space-between;
 }
 
+.loader {
+  border: 16px solid #dee2d6;
+  /* Light grey */
+  border-top: 16px solid #3581b8;
+  /* Blue */
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  margin: auto;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.timer {
+  font-weight: 800;
+  font-size: 1.5em;
+  margin-bottom: 2em;
+  color: #3581b8;
+}
+
 /* Result Component
 ========================== */
 .resultsContainer {
@@ -183,7 +210,7 @@ h1 .title {
   display: inline-block;
   margin: 0;
   padding: 1em 0.8em;
-  border: 20px solid #3581B8;
+  border: 20px solid #3581b8;
   border-radius: 50%;
   font: 700 4em "Open Sans", sans-serif;
 }

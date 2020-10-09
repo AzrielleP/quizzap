@@ -15,12 +15,25 @@ function App() {
   const [quiz, setQuiz] = useState(false);
   const [intro, setIntro] = useState(true);
   const [result, setResult] = useState(false);
+  const [question, setQuestion] = useState({ content: [], isLoaded: false });
+
+  const handleDataFetch = (fetchedData, boolean) => {
+    setQuestion({
+      content: fetchedData,
+      isLoaded: boolean,
+    });
+  };
 
   // handleStartQuiz will show the Quiz component.
   const handleStartQuiz = () => {
-    intro ? setIntro((previous) => !previous) : setResult((previous) => !previous);
+    intro
+      ? setIntro((previous) => !previous)
+      : setResult((previous) => !previous);
     setQuiz((previous) => !previous);
-    
+    setQuestion({
+      isLoaded: false,
+    });
+
     // Clear localStorage just in case the website refreshes.
     localStorage.clear();
   };
@@ -42,8 +55,20 @@ function App() {
   return (
     <div>
       {intro && <Intro handleStartQuiz={handleStartQuiz} />}
-      {quiz && <Quiz handleResult={handleResult} />}
-      {result && <Result handleIntro={handleIntro} handleStartQuiz={handleStartQuiz} />}
+      {quiz && (
+        <Quiz
+          handleResult={handleResult}
+          handleDataFetch={handleDataFetch}
+          question={question}
+        />
+      )}
+      {result && (
+        <Result
+          handleIntro={handleIntro}
+          handleStartQuiz={handleStartQuiz}
+          question={question}
+        />
+      )}
     </div>
   );
 }
