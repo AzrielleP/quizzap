@@ -10,7 +10,8 @@ function Quiz(props) {
   // States for the quiz itself
   const [questionNumber, setQuestionNumber] = useState(0);
   const [choice, setChoice] = useState(null);
-  const [question, setQuestion] = useState({ content: [], isLoaded: false });
+  const {handleDataFetch , question} = props;
+
 
   useEffect(() => {
     const getData = async () => {
@@ -27,10 +28,9 @@ function Quiz(props) {
           choiceArray.splice(answerPosition - 1, 0, item.correct_answer);
           return (item.choices = choiceArray);
         });
-        setQuestion({
-          content: jsonData.results,
-          isLoaded: true,
-        });
+
+        handleDataFetch(jsonData.results, true);
+      
       } catch (err) {
         return (
           <p>
