@@ -4,6 +4,7 @@ It imports all the questions from questions.js.
 =====================================*/
 
 import React, { useState, useEffect } from 'react';
+import Timer from './Timer';
 import repo from './questions.js';
 
 function Quiz(props) {
@@ -12,40 +13,15 @@ function Quiz(props) {
   const [question, setQuestion] = useState(repo[questionNumber]);
   const [choice, setChoice] = useState(null);
 
-  // States for the timer
-  const [time, handleTime] = useState({});
-  const [counter, handleCounter] = useState(5);
-
   const initializeStorage = () => {
     for (let i = 0; i < repo.length; i++) {
       localStorage.setItem(i, 'null')
     }
   }
-  /* ===== Timer Functions ===== */
-
-  const formatTime = () => {
-    handleTime({
-      minutes:Math.floor((counter % 3600) / 60),
-      seconds: Math.floor(counter % 60)
-    })
-  }
-
-  const resetTime = () => {
-    handleCounter(5);
-  }
 
   useEffect(() => {
     initializeStorage();
   }, [])
-
-  useEffect(() => {
-    (counter >= 0 && setTimeout(() => handleCounter(counter - 1), 1000)) || props.handleResult();
-    formatTime();
-
-    return () => resetTime
-    
-  }, [counter]);
-
 
   /* ===== Quiz Functions ===== */
 
@@ -91,9 +67,7 @@ function Quiz(props) {
 
   return (
     <div className="container quizProper">
-      {/* TIMER */}
-      <p>{time.minutes} : {time.seconds}</p>
-
+      <Timer handleResult = {props.handleResult}/>
       {/*  QUESTIONS */}
       <form className="content-container">
         <p className="questionNumber">Question #{questionNumber + 1}</p>
