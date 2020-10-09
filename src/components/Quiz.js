@@ -3,15 +3,28 @@ Quiz is a child component of App and contains the quiz proper.
 It imports all the questions from questions.js.
 =====================================*/
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import Timer from './Timer';
 import repo from './questions.js';
 
 function Quiz(props) {
+  // States for the quiz itself
   const [questionNumber, setQuestionNumber] = useState(0);
   const [question, setQuestion] = useState(repo[questionNumber]);
   const [choice, setChoice] = useState(null);
 
-  /* ===== Handle functions ===== */
+  const initializeStorage = () => {
+    for (let i = 0; i < repo.length; i++) {
+      localStorage.setItem(i, 'null')
+    }
+  }
+
+  useEffect(() => {
+    initializeStorage();
+  }, [])
+
+  /* ===== Quiz Functions ===== */
+
   function handleChoice(event) {
     setChoice(event.target.value);
   }
@@ -54,6 +67,8 @@ function Quiz(props) {
 
   return (
     <div className="container quizProper">
+      <Timer handleResult = {props.handleResult}/>
+      {/*  QUESTIONS */}
       <form className="content-container">
         <p className="questionNumber">Question #{questionNumber + 1}</p>
         <p className="question">{question.question}</p>
