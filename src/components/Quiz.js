@@ -6,6 +6,7 @@ It fetches the quiz data from Open Trivia DB API and uses the he library to deco
 import React, { useState, useEffect } from 'react';
 import he from 'he';
 import Timer from './Timer';
+import ProgressBar from './ProgressBar';
 
 function Quiz(props) {
   // States for the quiz itself
@@ -114,6 +115,7 @@ function Quiz(props) {
         <div className="container quizProper">
           <form className="content-container">
             <Timer handleResult={props.handleResult} />
+            <ProgressBar />
             <p className="questionNumber">Question #{questionNumber + 1}</p>
             <p className="question">
               {question.content[questionNumber].question}
