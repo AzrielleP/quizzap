@@ -1,6 +1,6 @@
 /*=====================================
 Quiz is a child component of App and contains the quiz proper.
-It fetches the quiz data from Open Trivia DB API.
+It fetches the quiz data from Open Trivia DB API and uses the he library to decode HTML entities.
 =====================================*/
 
 import React, { useState, useEffect } from 'react';
@@ -41,8 +41,6 @@ function Quiz(props) {
           return item;
         });
 
-        console.log(he.decode('&#039;'));
-
         handleDataFetch(formattedData, true);
       } catch (err) {
         return (
@@ -61,7 +59,6 @@ function Quiz(props) {
         window.localStorage.setItem(i, 'null');
       }
     };
-
     initializeStorage();
   }, []);
 
