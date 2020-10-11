@@ -60,7 +60,7 @@ function Quiz(props) {
       }
     };
     initializeStorage();
-  }, []);
+  }, [category, difficulty]);
 
   /* ===== Quiz Functions ===== */
 
