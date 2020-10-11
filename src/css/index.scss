@@ -37,7 +37,6 @@ body {
   flex-flow: column;
   justify-content: center;
   height: 100vh;
-  padding: 2em;
   text-align: center;
 }
 
@@ -134,6 +133,10 @@ h1 {
   }
 }
 
+.intro-container {
+  margin: 1em;
+}
+
 .side-svg-container {
   display: none;
 }
@@ -142,7 +145,7 @@ h1 {
 ========================== */
 
 .questionNumber {
-  font: lighter 0.8em $body-font;
+  font: lighter 1em $body-font;
   color: $black-faded;
   text-transform: uppercase;
 }
@@ -208,11 +211,47 @@ h1 {
   }
 }
 
-.timer {
-  font-weight: 800;
-  font-size: 1.5em;
-  margin-bottom: 2em;
-  color: $blue;
+.mainContainer {
+  margin: 2em;
+  max-width: 1300px;
+}
+
+//  Timer and Progress Bar Components
+
+.progressAndTimerContainer {
+  display: flex;
+  .timer {
+    margin: 0 1em 0 0;
+    width: 53px;
+    font: 800 1.1em $body-font;
+    color: $blue;
+  }
+  .progressBar {
+    width: 85%;
+    .progressStatus {
+      margin: 0.5em 0 1em 0;
+      font: lighter 0.6em $body-font;
+      text-align: right;
+      text-transform: uppercase;
+      color: rgba(21,19,19, 0.5);
+     
+    }
+    progress[value] {
+      /* Reset the default appearance */
+      -webkit-appearance: none;
+      appearance: none;
+      height: 1.4em;
+      width: 100%;
+    }
+    progress[value]::-webkit-progress-bar {
+      background-color: $white;
+      border-radius: 2px;
+      border: 1px solid $blue;
+    }
+    progress[value]::-webkit-progress-value {
+      background-color: $blue;
+    }
+  }
 }
 
 /* Result Component
@@ -251,7 +290,8 @@ h1 {
   /* Intro Component
   ========================== */
 
-  .container {
+  .container,
+  .intro-container {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -288,6 +328,10 @@ h1 {
 
   /* Quiz Component
   ========================== */
+  .mainContainer {
+    margin: auto;
+  }
+
   .questionNumber {
     font-size: 1em;
   }
@@ -298,10 +342,24 @@ h1 {
   }
 
   .quizProper {
-    margin: 5em;
+    margin: 1em;
+    padding: 0 1.5em;
     .content-container,
     .side-svg-container {
       width: 50%;
+    }
+  }
+
+  .progressAndTimerContainer {
+    margin: 0 2.6em;
+    .timer {
+      font-size: 1.1em;
+    }
+    .progressBar {
+      width: 92%;
+      .progressStatus {
+        font-size: 0.8em
+      }
     }
   }
 }

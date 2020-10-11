@@ -22,7 +22,6 @@ body {
   flex-flow: column;
   justify-content: center;
   height: 100vh;
-  padding: 2em;
   text-align: center;
 }
 
@@ -116,6 +115,10 @@ h1 .title {
   font: lighter 0.8em "Open Sans", sans-serif;
 }
 
+.intro-container {
+  margin: 1em;
+}
+
 .side-svg-container {
   display: none;
 }
@@ -123,7 +126,7 @@ h1 .title {
 /* Quiz Component
 ========================== */
 .questionNumber {
-  font: lighter 0.8em "Open Sans", sans-serif;
+  font: lighter 1em "Open Sans", sans-serif;
   color: rgba(21, 19, 19, 0.8);
   text-transform: uppercase;
 }
@@ -189,11 +192,44 @@ h1 .title {
     transform: rotate(360deg);
   }
 }
-.timer {
-  font-weight: 800;
-  font-size: 1.5em;
-  margin-bottom: 2em;
+.mainContainer {
+  margin: 2em;
+  max-width: 1300px;
+}
+
+.progressAndTimerContainer {
+  display: flex;
+}
+.progressAndTimerContainer .timer {
+  margin: 0 1em 0 0;
+  width: 53px;
+  font: 800 1.1em "Open Sans", sans-serif;
   color: #3581b8;
+}
+.progressAndTimerContainer .progressBar {
+  width: 85%;
+}
+.progressAndTimerContainer .progressBar .progressStatus {
+  margin: 0.5em 0 1em 0;
+  font: lighter 0.6em "Open Sans", sans-serif;
+  text-align: right;
+  text-transform: uppercase;
+  color: rgba(21, 19, 19, 0.5);
+}
+.progressAndTimerContainer .progressBar progress[value] {
+  /* Reset the default appearance */
+  -webkit-appearance: none;
+  appearance: none;
+  height: 1.4em;
+  width: 100%;
+}
+.progressAndTimerContainer .progressBar progress[value]::-webkit-progress-bar {
+  background-color: #f3f8f2;
+  border-radius: 2px;
+  border: 1px solid #3581b8;
+}
+.progressAndTimerContainer .progressBar progress[value]::-webkit-progress-value {
+  background-color: #3581b8;
 }
 
 /* Result Component
@@ -231,33 +267,40 @@ h1 .title {
 
   /* Intro Component
   ========================== */
-  .container {
+  .container,
+.intro-container {
     display: flex;
     align-items: center;
     justify-content: center;
     flex: 1;
   }
-  .container .content-container h1 {
+  .container .content-container h1,
+.intro-container .content-container h1 {
     font-size: 3em;
   }
-  .container .content-container .subtext {
+  .container .content-container .subtext,
+.intro-container .content-container .subtext {
     margin-bottom: 3em;
     font-size: 1.2em;
   }
-  .container .content-container .selector {
+  .container .content-container .selector,
+.intro-container .content-container .selector {
     display: flex;
     margin: 1em;
     font-size: 1em;
   }
-  .container .content-container .selector p {
+  .container .content-container .selector p,
+.intro-container .content-container .selector p {
     flex-basis: 8em;
   }
-  .container .content-container .selector select {
+  .container .content-container .selector select,
+.intro-container .content-container .selector select {
     height: 3em;
     width: 13em;
     font-size: 1em;
   }
-  .container .side-svg-container {
+  .container .side-svg-container,
+.intro-container .side-svg-container {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -266,6 +309,10 @@ h1 .title {
 
   /* Quiz Component
   ========================== */
+  .mainContainer {
+    margin: auto;
+  }
+
   .questionNumber {
     font-size: 1em;
   }
@@ -276,11 +323,25 @@ h1 .title {
   }
 
   .quizProper {
-    margin: 5em;
+    margin: 1em;
+    padding: 0 1.5em;
   }
   .quizProper .content-container,
 .quizProper .side-svg-container {
     width: 50%;
+  }
+
+  .progressAndTimerContainer {
+    margin: 0 2.6em;
+  }
+  .progressAndTimerContainer .timer {
+    font-size: 1.1em;
+  }
+  .progressAndTimerContainer .progressBar {
+    width: 92%;
+  }
+  .progressAndTimerContainer .progressBar .progressStatus {
+    font-size: 0.8em;
   }
 }
 
