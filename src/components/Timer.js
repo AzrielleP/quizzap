@@ -18,7 +18,7 @@ export default function Timer(props) {
     (counter >= 0 && setTimeout(() => setCounter(counter - 1), 1000)) ||
       handleResult();
     
-  }, [counter], handleResult);
+  }, [counter, handleResult]);
 
   return (
     <p className = "timer">
