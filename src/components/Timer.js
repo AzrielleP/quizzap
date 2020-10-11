@@ -1,25 +1,24 @@
 import React, { useState, useEffect } from 'react';
 
 export default function Timer(props) {
-  // States for the timer
-  const [time, handleTime] = useState({});
-  const [counter, handleCounter] = useState(300);
+  const [time, setTime] = useState({});
+  const [counter, setCounter] = useState(300);
   const { handleResult } = props;
-
-  /* ===== Timer Functions ===== */
-  const formatTime = () => {
-    handleTime({
-      minutes: Math.floor((counter % 3600) / 60),
-      seconds: Math.floor(counter % 60),
-    });
-  };
-
+  
   useEffect(() => {
-    // Start the countdown as soon as the component is mounter. If it reaches 0, automatically go to the Results component.
-    (counter >= 0 && setTimeout(() => handleCounter(counter - 1), 1000)) ||
-      handleResult();
+    const formatTime = () => {
+      setTime({
+        minutes: Math.floor((counter % 3600) / 60),
+        seconds: Math.floor(counter % 60),
+      });
+    };
     formatTime();
-  }, [counter]);
+    
+    // Start the countdown as soon as the component is mounted. If it reaches 0, automatically go to the Results component.
+    (counter >= 0 && setTimeout(() => setCounter(counter - 1), 1000)) ||
+      handleResult();
+    
+  }, [counter], handleResult);
 
   return (
     <p className = "timer">
