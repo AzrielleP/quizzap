@@ -4,6 +4,7 @@ It fetches the quiz data from Open Trivia DB API.
 =====================================*/
 
 import React, { useState, useEffect } from 'react';
+import he from 'he';
 import Timer from './Timer';
 
 function Quiz(props) {
@@ -16,7 +17,11 @@ function Quiz(props) {
     const getData = async () => {
       try {
         const data = await fetch(
-          'https://opentdb.com/api.php?amount=20&category=' + category + '&difficulty=' + difficulty + '&type=multiple'
+          'https://opentdb.com/api.php?amount=20&category=' +
+            category +
+            '&difficulty=' +
+            difficulty +
+            '&type=multiple'
         );
         const jsonData = await data.json();
 
@@ -28,7 +33,17 @@ function Quiz(props) {
           return (item.choices = choiceArray);
         });
 
-        handleDataFetch(jsonData.results, true);
+        // Open Trivia DB contains HTML entities. Use the he library to decode all of them.
+        const formattedData = jsonData.results.map((item) => {
+          item.question = he.decode(item.question);
+          item.choices = item.choices.map((item) => he.decode(item));
+          item.correct_answer = he.decode(item.correct_answer);
+          return item;
+        });
+
+        console.log(he.decode('&#039;'));
+
+        handleDataFetch(formattedData, true);
       } catch (err) {
         return (
           <p>
@@ -126,7 +141,13 @@ function Quiz(props) {
                 );
               })}
             </ul>
-            <div className="buttonContainer" style = {{justifyContent: questionNumber === 0 ? 'flex-end' : 'space-between'}}>
+            <div
+              className="buttonContainer"
+              style={{
+                justifyContent:
+                  questionNumber === 0 ? 'flex-end' : 'space-between',
+              }}
+            >
               {/* {Hide the Previous button when the user it at question #1.} */}
               {questionNumber !== 0 ? (
                 <button className="prev" onClick={handlePrevClick}>
