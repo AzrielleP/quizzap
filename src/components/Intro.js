@@ -21,7 +21,7 @@ function Intro(props) {
         <h1>
           Welcome to <span className="title">Quizzap</span>
         </h1>
-        <p className="subtext">Answer all questions within the time limit!</p>
+        <p className="subtext">Answer all trivia questions within the time limit!</p>
 
         <form onSubmit = {handleSubmit} >
           <div className="selector">
