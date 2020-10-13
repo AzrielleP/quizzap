@@ -1,0 +1,22 @@
+/* Setting up Variables
+========================== */
+
+// Fonts
+$head-font: 'Raleway', sans-serif;
+$body-font: 'Open Sans', sans-serif;
+
+// Colors
+$black: #151313;
+$black-faded: rgba(21, 19, 19, 0.8);
+$black-ultra-faded: rgba(21, 19, 19, 0.5);
+$gray: #dee2d6;
+$white: #f3f8f2;
+$peach: #fcb07e;
+$blue: #3581b8;
+
+.timer {
+    margin: 0 1em 0 0;
+    width: 53px;
+    font: 800 1.1em $body-font;
+    color: $blue;
+  }

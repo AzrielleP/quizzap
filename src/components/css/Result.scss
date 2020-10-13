@@ -1,0 +1,153 @@
+/* Setting up Variables
+========================== */
+
+// Fonts
+$head-font: 'Raleway', sans-serif;
+$body-font: 'Open Sans', sans-serif;
+
+// Colors
+$black: #151313;
+$black-faded: rgba(21, 19, 19, 0.8);
+$black-ultra-faded: rgba(21, 19, 19, 0.5);
+$gray: #dee2d6;
+$white: #f3f8f2;
+$peach: #fcb07e;
+$blue: #3581b8;
+
+/* Results Component
+========================== */
+
+// Buttons
+
+.backToMenu {
+  margin-left: 1em;
+  background-color: $gray;
+  font-weight: bold;
+}
+
+.backToMenu:active,
+.backToMenu:focus {
+  background-color: #b1b4aa;
+}
+
+.tryAgain {
+  background-color: $peach;
+  color: $white;
+}
+
+.tryAgain:hover,
+.backToMenu:hover {
+  opacity: 0.6;
+}
+
+.resultButtonContainer {
+  font-size: 0.9em;
+}
+
+// Container
+
+.scoreContainer {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+  p:first-child {
+    margin-bottom: 1em;
+    font-family: $head-font;
+    text-transform: uppercase;
+  }
+  .score {
+    display: inline-block;
+    margin: 0;
+    padding-bottom: 0.5em;
+    font: 700 3em $body-font;
+    text-transform: uppercase;
+  }
+  .result {
+    font: 800 1.5em $head-font;
+    margin-bottom: 0;
+  }
+}
+
+.reviewContainer {
+  margin: 1em 2em;
+  .title {
+    margin-bottom: 1em;
+    font-family: $head-font;
+    text-transform: uppercase;
+  }
+  .quizReview {
+    list-style-type: none;
+    padding: 0;
+    .itemContainer {
+      display: flex;
+      align-items: center;
+      margin: 0.5em;
+      .checkContainer {
+          i {
+              margin-right: 0.5em;
+              font-size: 1.5em
+          }
+      }
+      .item {
+        padding: 0 0.5em;
+        .itemQuestion {
+          font: 400 0.8em $body-font;
+          text-align: left;
+          .answer {
+              margin-left: 0.5em;
+            text-transform: initial;
+            font-weight: bold;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Fontawesome Icons
+.fa-times-circle {
+    color: $black-ultra-faded;
+}
+
+.fa-check-circle {
+    font-weight: bold;
+    color: $blue;
+}
+
+@media screen and (min-width:1024px) {
+    .resultsContainer {
+        display: flex;
+        align-items: center;
+        .scoreContainer {
+            width: 50%;
+        }
+        .reviewContainer {
+            width: 50%;
+        }
+    }
+}
+
+@media screen and (min-width: 1400px) {
+    .tryAgain, 
+    .backToMenu {
+        font-size: 1.4em;
+    }
+
+    .scoreContainer {
+        p:first-child {
+            font-size: 24px;
+        }
+        .score {
+            font-size: 5em;
+        }
+        .result {
+            font-size: 2em;
+        }
+    }
+
+    .reviewContainer .quizReview .itemContainer .item .itemQuestion {
+        font-size: 1em;
+    }
+}

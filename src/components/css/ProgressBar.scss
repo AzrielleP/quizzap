@@ -1,0 +1,43 @@
+/* Setting up Variables
+========================== */
+
+// Fonts
+$head-font: 'Raleway', sans-serif;
+$body-font: 'Open Sans', sans-serif;
+
+// Colors
+$black: #151313;
+$black-faded: rgba(21, 19, 19, 0.8);
+$black-ultra-faded: rgba(21, 19, 19, 0.5);
+$gray: #dee2d6;
+$white: #f3f8f2;
+$peach: #fcb07e;
+$blue: #3581b8;
+
+
+ .progressBar {
+    width: 85%;
+    .progressStatus {
+      margin: 0.5em 0 1em 0;
+      font: lighter 0.6em $body-font;
+      text-align: right;
+      text-transform: uppercase;
+      color: rgba(21,19,19, 0.5);
+     
+    }
+    progress[value] {
+      /* Reset the default appearance */
+      -webkit-appearance: none;
+      appearance: none;
+      height: 1.4em;
+      width: 100%;
+    }
+    progress[value]::-webkit-progress-bar {
+      background-color: $white;
+      border-radius: 2px;
+      border: 1px solid $blue;
+    }
+    progress[value]::-webkit-progress-value {
+      background-color: $blue;
+    }
+  }

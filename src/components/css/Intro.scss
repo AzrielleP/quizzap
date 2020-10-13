@@ -1,0 +1,152 @@
+/* Setting up Variables
+========================== */
+
+// Fonts
+$head-font: 'Raleway', sans-serif;
+$body-font: 'Open Sans', sans-serif;
+
+// Colors
+$black: #151313;
+$black-faded: rgba(21, 19, 19, 0.8);
+$black-ultra-faded: rgba(21, 19, 19, 0.5);
+$gray: #dee2d6;
+$white: #f3f8f2;
+$peach: #fcb07e;
+$blue: #3581b8;
+
+/* Intro Component
+========================== */
+
+// Buttons
+.startQuiz {
+  color: $white;
+  background-color: $blue;
+}
+
+.startQuiz:active,
+.startQuiz:focus {
+  background-color: #28648f;
+}
+
+.startQuiz:hover {
+  opacity: 0.6;
+}
+
+// Introductory Text
+h1 {
+  font-family: $head-font;
+  .title {
+    color: $peach;
+  }
+}
+
+.subtext {
+  margin-bottom: 5em;
+  font-size: 0.8em;
+  font-weight: lighter;
+}
+
+// Selector
+.selector {
+  text-transform: uppercase;
+  margin: 1em 0;
+  select {
+    outline: none;
+    width: 16em;
+    padding: 0.5em;
+    border: 0.5px solid $gray;
+    font: lighter 0.8em $body-font;
+  }
+}
+
+// Containers
+.intro-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0 1em;
+  text-align: center;
+}
+
+.side-svg-container {
+  display: none;
+}
+
+@media screen and (min-width: 850px) {
+  .intro-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    margin: 0 2em;
+    text-align: left;
+    .content-container {
+      h1 {
+        font-size: 3em;
+      }
+      .subtext {
+        margin-bottom: 3em;
+        font-size: 1.2em;
+      }
+      .selector {
+        display: flex;
+        margin: 1em;
+        font-size: 1em;
+        p {
+          flex-basis: 8em;
+        }
+        select {
+          height: 3em;
+          width: 13em;
+          font-size: 1em;
+        }
+      }
+    }
+    .side-svg-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 50%;
+      margin-left: 1.5em;
+    }
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .startQuiz {
+    font-size: 1.5em;
+  }
+
+  .intro-container {
+    .content-container {
+      h1 {
+        font-size: 4em;
+      }
+      .subtext {
+        margin-bottom: 3em;
+        font-size: 2em;
+      }
+      .selector {
+        display: flex;
+        margin: 1em;
+        font-size: 1.5em;
+        p {
+          flex-basis: 8em;
+        }
+        select {
+          height: 3em;
+          width: 13em;
+          font-size: 1em;
+        }
+      }
+    }
+    .side-svg-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-left: 1.5em;
+      width: 50%;
+    }
+  }
+}

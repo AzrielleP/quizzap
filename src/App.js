@@ -1,9 +1,12 @@
 /*=====================================
-App is the parent component. It sets three states which are responsible on how the components will appear or hide based on its boolean values:
+App is the parent component. 
+It has three states which are responsible on how the components will appear or hide based on its boolean values:
   - quiz will show / hide the Quiz component.
   - intro will show / hide the Intro component.
   - result will show / hide the Result component.
-These states are handed down as props for each component.
+The other three states are responsible for setting data to be used in the quiz proper:
+  - question will hold the fetched data from the API. This will be used in the Quiz and Result components.
+  - category and difficulty will contain the user's preference. This will be used in the Intro and Quiz components.
 =====================================*/
 
 import React, { useState } from 'react';
@@ -34,7 +37,6 @@ function App() {
     });
   };
 
-  // handleStartQuiz will show the Quiz component.
   const handleStartQuiz = () => {
     intro
       ? setIntro((previous) => !previous)
@@ -48,13 +50,11 @@ function App() {
     localStorage.clear();
   };
 
-  // handleResult will show the Result component.
   const handleResult = () => {
     setQuiz((previous) => !previous);
     setResult((previous) => !previous);
   };
 
-  // handleIntro will show the Intro component.
   const handleIntro = () => {
     setResult((previous) => !previous);
     setIntro((previous) => !previous);
@@ -79,7 +79,7 @@ function App() {
           handleDataFetch={handleDataFetch}
           question={question}
           category={category}
-          difficulty = {difficulty}
+          difficulty={difficulty}
         />
       )}
       {result && (

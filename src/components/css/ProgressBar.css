@@ -1,0 +1,29 @@
+/* Setting up Variables
+========================== */
+.progressBar {
+  width: 85%;
+}
+.progressBar .progressStatus {
+  margin: 0.5em 0 1em 0;
+  font: lighter 0.6em "Open Sans", sans-serif;
+  text-align: right;
+  text-transform: uppercase;
+  color: rgba(21, 19, 19, 0.5);
+}
+.progressBar progress[value] {
+  /* Reset the default appearance */
+  -webkit-appearance: none;
+  appearance: none;
+  height: 1.4em;
+  width: 100%;
+}
+.progressBar progress[value]::-webkit-progress-bar {
+  background-color: #f3f8f2;
+  border-radius: 2px;
+  border: 1px solid #3581b8;
+}
+.progressBar progress[value]::-webkit-progress-value {
+  background-color: #3581b8;
+}
+
+/*# sourceMappingURL=ProgressBar.css.map */
