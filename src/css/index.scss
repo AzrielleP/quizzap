@@ -47,12 +47,7 @@ button {
   -webkit-tap-highlight-color: transparent;
 }
 
-.next,
-.prev {
-  border: 2px solid $peach;
-  background-color: $white;
-  color: $peach;
-}
+
 
 .backToMenu {
   margin-left: 1em;
@@ -65,23 +60,17 @@ button {
   background-color: #b1b4aa;
 }
 
-.next:focus,
-.prev:focus {
-  opacity: 0.8;
-}
 
-.next:active,
-.prev:active,
-.submit,
+
+
+
 .tryAgain {
   background-color: $peach;
   color: $white;
 }
 
-.next:hover,
-.prev:hover,
+
 .tryAgain:hover,
-.submit:hover,
 .backToMenu:hover {
   opacity: 0.6;
 }
@@ -89,77 +78,7 @@ button {
 /* Quiz Component
 ========================== */
 
-.questionNumber {
-  font: lighter 1em $body-font;
-  color: $black-faded;
-  text-transform: uppercase;
-}
 
-.question {
-  font: 1.3em $head-font;
-}
-
-// Choices
-.choicesContainer {
-  list-style-type: none;
-  padding: 0;
-  li {
-    -webkit-tap-highlight-color: transparent;
-    cursor: pointer;
-    input[type='radio'] {
-      display: none;
-    }
-    input[type='radio']:checked + label {
-      background-color: $blue;
-      color: $white;
-    }
-    label {
-      display: flex;
-      align-items: center;
-      border: 1px solid $gray;
-      border-radius: 20px;
-      margin: 0.5em 0;
-      padding: 0.7em;
-      text-align: center;
-      cursor: pointer;
-      p {
-        margin: auto;
-      }
-      .choiceText {
-        font-size: 1em;
-      }
-    }
-  }
-}
-
-.buttonContainer {
-  display: flex;
-  justify-content: space-between;
-}
-
-.loader {
-  border: 16px solid $gray; /* Light grey */
-  border-top: 16px solid $blue; /* Blue */
-  border-radius: 50%;
-  width: 120px;
-  height: 120px;
-  margin: auto;
-  animation: spin 1s linear infinite;
-}
-
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
-.mainContainer {
-  margin: 2em;
-  max-width: 1300px;
-}
 
 //  Timer and Progress Bar Components
 
@@ -257,48 +176,4 @@ button {
   font-size: 0.9em;
 }
 
-/* MEDIA QUERIES
-========================== */
-@media screen and (min-width: 850px) {
 
-  /* Quiz Component
-  ========================== */
-  .mainContainer {
-    margin: auto;
-  }
-
-  .questionNumber {
-    font-size: 1em;
-  }
-
-  .question {
-    margin-bottom: 2em;
-    font-size: 1.5em;
-  }
-
-  .quizProper {
-    margin: 1em;
-    padding: 0 1.5em;
-    .content-container,
-    .side-svg-container {
-      width: 50%;
-    }
-  }
-
-  .progressAndTimerContainer {
-    margin: 0 2.6em;
-    .timer {
-      font-size: 1.1em;
-    }
-    .progressBar {
-      width: 92%;
-      .progressStatus {
-        font-size: 0.8em
-      }
-    }
-  }
-
-  /* Results Component
-  ========================== */
-  
-}

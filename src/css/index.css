@@ -31,13 +31,6 @@ button {
   -webkit-tap-highlight-color: transparent;
 }
 
-.next,
-.prev {
-  border: 2px solid #fcb07e;
-  background-color: #f3f8f2;
-  color: #fcb07e;
-}
-
 .backToMenu {
   margin-left: 1em;
   background-color: #dee2d6;
@@ -49,101 +42,18 @@ button {
   background-color: #b1b4aa;
 }
 
-.next:focus,
-.prev:focus {
-  opacity: 0.8;
-}
-
-.next:active,
-.prev:active,
-.submit,
 .tryAgain {
   background-color: #fcb07e;
   color: #f3f8f2;
 }
 
-.next:hover,
-.prev:hover,
 .tryAgain:hover,
-.submit:hover,
 .backToMenu:hover {
   opacity: 0.6;
 }
 
 /* Quiz Component
 ========================== */
-.questionNumber {
-  font: lighter 1em "Open Sans", sans-serif;
-  color: rgba(21, 19, 19, 0.8);
-  text-transform: uppercase;
-}
-
-.question {
-  font: 1.3em "Raleway", sans-serif;
-}
-
-.choicesContainer {
-  list-style-type: none;
-  padding: 0;
-}
-.choicesContainer li {
-  -webkit-tap-highlight-color: transparent;
-  cursor: pointer;
-}
-.choicesContainer li input[type=radio] {
-  display: none;
-}
-.choicesContainer li input[type=radio]:checked + label {
-  background-color: #3581b8;
-  color: #f3f8f2;
-}
-.choicesContainer li label {
-  display: flex;
-  align-items: center;
-  border: 1px solid #dee2d6;
-  border-radius: 20px;
-  margin: 0.5em 0;
-  padding: 0.7em;
-  text-align: center;
-  cursor: pointer;
-}
-.choicesContainer li label p {
-  margin: auto;
-}
-.choicesContainer li label .choiceText {
-  font-size: 1em;
-}
-
-.buttonContainer {
-  display: flex;
-  justify-content: space-between;
-}
-
-.loader {
-  border: 16px solid #dee2d6;
-  /* Light grey */
-  border-top: 16px solid #3581b8;
-  /* Blue */
-  border-radius: 50%;
-  width: 120px;
-  height: 120px;
-  margin: auto;
-  animation: spin 1s linear infinite;
-}
-
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-.mainContainer {
-  margin: 2em;
-  max-width: 1300px;
-}
-
 .progressAndTimerContainer {
   display: flex;
 }
@@ -235,50 +145,6 @@ button {
 
 .resultButtonContainer {
   font-size: 0.9em;
-}
-
-/* MEDIA QUERIES
-========================== */
-@media screen and (min-width: 850px) {
-  /* Quiz Component
-  ========================== */
-  .mainContainer {
-    margin: auto;
-  }
-
-  .questionNumber {
-    font-size: 1em;
-  }
-
-  .question {
-    margin-bottom: 2em;
-    font-size: 1.5em;
-  }
-
-  .quizProper {
-    margin: 1em;
-    padding: 0 1.5em;
-  }
-  .quizProper .content-container,
-.quizProper .side-svg-container {
-    width: 50%;
-  }
-
-  .progressAndTimerContainer {
-    margin: 0 2.6em;
-  }
-  .progressAndTimerContainer .timer {
-    font-size: 1.1em;
-  }
-  .progressAndTimerContainer .progressBar {
-    width: 92%;
-  }
-  .progressAndTimerContainer .progressBar .progressStatus {
-    font-size: 0.8em;
-  }
-
-  /* Results Component
-  ========================== */
 }
 
 /*# sourceMappingURL=index.css.map */

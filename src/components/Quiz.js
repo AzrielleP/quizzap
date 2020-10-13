@@ -8,6 +8,7 @@ import he from 'he';
 import Timer from './Timer';
 import ProgressBar from './ProgressBar';
 import QuizSvg from './SVG/QuizSvg';
+import './css/Quiz.css';
 
 function Quiz(props) {
   // States for the quiz itself
@@ -107,7 +108,7 @@ function Quiz(props) {
   const displayQuiz = () => {
     if (!question.isLoaded) {
       return (
-        <div className="container">
+        <div className="loaderContainer">
           <div className="loader"></div>
         </div>
       );
