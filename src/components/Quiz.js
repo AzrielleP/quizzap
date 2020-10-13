@@ -11,12 +11,12 @@ import QuizSvg from './SVG/QuizSvg';
 import './css/Quiz.css';
 
 function Quiz(props) {
-  // States for the quiz itself
   const [questionNumber, setQuestionNumber] = useState(0);
   const [choice, setChoice] = useState(null);
   const { handleDataFetch, question, category, difficulty } = props;
 
   useEffect(() => {
+    // Fetch data from the API.
     const getData = async () => {
       try {
         const data = await fetch(
@@ -28,7 +28,7 @@ function Quiz(props) {
         );
         const jsonData = await data.json();
 
-        // Join the correct answer and incorrect answers in an array and shuffle them.
+        // Join the correct and incorrect answers in an array and shuffle them.
         jsonData.results.map((item) => {
           const answerPosition = Math.floor(Math.random() * 3);
           const choiceArray = [...item.incorrect_answers];
@@ -106,6 +106,7 @@ function Quiz(props) {
   }
 
   const displayQuiz = () => {
+    // When the data is not yet fetched, display the loader.
     if (!question.isLoaded) {
       return (
         <div className="loaderContainer">
@@ -113,6 +114,7 @@ function Quiz(props) {
         </div>
       );
     } else {
+      // Display the quiz proper after the data is fetched.
       return (
         <div className="mainContainer">
           <div className="progressAndTimerContainer">
@@ -146,6 +148,7 @@ function Quiz(props) {
                   );
                 })}
               </ul>
+              {/* Style the first Next button */}
               <div
                 className="buttonContainer"
                 style={{
