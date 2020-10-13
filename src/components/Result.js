@@ -1,6 +1,6 @@
 /*=====================================
 Result is a child component of App. 
-This component calculates and shows the user's scores.
+This component calculates and shows the user's scores as well as the questions he got right / wrong.
 =====================================*/
 
 import React, { useState, useEffect } from 'react';
