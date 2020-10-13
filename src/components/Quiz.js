@@ -115,14 +115,13 @@ function Quiz(props) {
     } else {
       return (
         <div className="mainContainer">
-          <div className = "progressAndTimerContainer">
+          <div className="progressAndTimerContainer">
             <Timer handleResult={props.handleResult} />
             <ProgressBar />
           </div>
 
           <div className="container quizProper">
             <form className="content-container">
-              
               <p className="questionNumber">Question #{questionNumber + 1}</p>
               <p className="question">
                 {question.content[questionNumber].question}

@@ -58,7 +58,12 @@ $blue: #3581b8;
   align-items: center;
   justify-content: center;
   flex: 1;
+  width: 100%;
   text-align: center;
+}
+
+form.content-container {
+  width: 100%;
 }
 
 .buttonContainer {
@@ -67,6 +72,7 @@ $blue: #3581b8;
 }
 
 .progressAndTimerContainer {
+  display: flex;
   position: relative;
   top: 0;
   width: 90%;
