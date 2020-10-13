@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import './css/ProgressBar.css';
 
 function ProgressBar() {
   const [length] = useState(localStorage.length);
@@ -16,12 +17,13 @@ function ProgressBar() {
   }, [storageContents]);
 
   return (
-    <div className = "progressBar">
-        <progress value={answeredItems} max={length} />
-        <p className = "progressStatus">Questions Answered: {answeredItems}/{length}</p>
+    <div className="progressBar">
+      <progress value={answeredItems} max={length} />
+      <p className="progressStatus">
+        Questions Answered: {answeredItems}/{length}
+      </p>
     </div>
-  )
-
+  );
 }
 
 export default ProgressBar;
