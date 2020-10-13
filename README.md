@@ -5,6 +5,7 @@ Quizzap is a quiz application built with React. It has the following features:
 - Category and difficulty selection
 - Countdown timer
 - Allows the user to go back to previous questions to change / review his answers.
+- Displays the user's score as well as the questions that he got right/wrong.
 
 # What I Used
 - React.js
