@@ -1,4 +1,3 @@
-/* Quizzap Styling */
 /* Setting up Variables
 ========================== */
 /* DEFAULTS
@@ -17,8 +16,6 @@ body {
   background-color: #f3f8f2;
 }
 
-/* Buttons
-========================== */
 button {
   border: none;
   outline: none;
@@ -29,122 +26,6 @@ button {
   text-transform: uppercase;
   cursor: pointer;
   -webkit-tap-highlight-color: transparent;
-}
-
-.backToMenu {
-  margin-left: 1em;
-  background-color: #dee2d6;
-  font-weight: bold;
-}
-
-.backToMenu:active,
-.backToMenu:focus {
-  background-color: #b1b4aa;
-}
-
-.tryAgain {
-  background-color: #fcb07e;
-  color: #f3f8f2;
-}
-
-.tryAgain:hover,
-.backToMenu:hover {
-  opacity: 0.6;
-}
-
-/* Quiz Component
-========================== */
-.progressAndTimerContainer {
-  display: flex;
-}
-.progressAndTimerContainer .timer {
-  margin: 0 1em 0 0;
-  width: 53px;
-  font: 800 1.1em "Open Sans", sans-serif;
-  color: #3581b8;
-}
-.progressAndTimerContainer .progressBar {
-  width: 85%;
-}
-.progressAndTimerContainer .progressBar .progressStatus {
-  margin: 0.5em 0 1em 0;
-  font: lighter 0.6em "Open Sans", sans-serif;
-  text-align: right;
-  text-transform: uppercase;
-  color: rgba(21, 19, 19, 0.5);
-}
-.progressAndTimerContainer .progressBar progress[value] {
-  /* Reset the default appearance */
-  -webkit-appearance: none;
-  appearance: none;
-  height: 1.4em;
-  width: 100%;
-}
-.progressAndTimerContainer .progressBar progress[value]::-webkit-progress-bar {
-  background-color: #f3f8f2;
-  border-radius: 2px;
-  border: 1px solid #3581b8;
-}
-.progressAndTimerContainer .progressBar progress[value]::-webkit-progress-value {
-  background-color: #3581b8;
-}
-
-/* Result Component
-========================== */
-.scoreContainer {
-  text-align: center;
-}
-.scoreContainer p:first-child {
-  margin-bottom: 1em;
-  font-family: "Raleway", sans-serif;
-  text-transform: uppercase;
-}
-.scoreContainer .score {
-  display: inline-block;
-  margin: 0;
-  padding-bottom: 0.5em;
-  font: 700 3em "Open Sans", sans-serif;
-  text-transform: uppercase;
-}
-.scoreContainer .result {
-  font: 800 1.5em "Raleway", sans-serif;
-  margin-bottom: 0;
-}
-
-.quizReview {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-.quizReview .itemContainer {
-  display: flex;
-  align-items: center;
-  border: 1px solid rgba(21, 19, 19, 0.8);
-  border-radius: 10px;
-  width: 20em;
-  margin: 0.5em;
-}
-.quizReview .itemContainer .checkContainer {
-  background-color: #3581b8;
-}
-.quizReview .itemContainer .item {
-  padding: 0 0.5em;
-}
-.quizReview .itemContainer .item .itemQuestion {
-  font: 400 0.7em "Open Sans", sans-serif;
-  text-align: left;
-}
-.quizReview .itemContainer .item .userAnswer {
-  text-transform: uppercase;
-  font-size: 0.6em;
-}
-.quizReview .itemContainer .item .userAnswer .answer {
-  text-transform: initial;
-  font-weight: bold;
-}
-
-.resultButtonContainer {
-  font-size: 0.9em;
 }
 
 /*# sourceMappingURL=index.css.map */
