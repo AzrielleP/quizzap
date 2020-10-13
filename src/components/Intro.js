@@ -5,6 +5,7 @@ This component enables the user to select the quiz category and start the quiz.
 
 import React from 'react';
 import IntroSvg from './SVG/IntroSvg';
+import './css/Intro.css';
 
 function Intro(props) {
   const {handleStartQuiz, handleQuizDifficulty, handleQuizCategory, difficulty, category} = props;

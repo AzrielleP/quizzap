@@ -17,13 +17,6 @@ body {
   background-color: #f3f8f2;
 }
 
-#root {
-  display: flex;
-  flex-flow: column;
-  justify-content: center;
-  text-align: center;
-}
-
 /* Buttons
 ========================== */
 button {
@@ -36,16 +29,6 @@ button {
   text-transform: uppercase;
   cursor: pointer;
   -webkit-tap-highlight-color: transparent;
-}
-
-.startQuiz {
-  color: #f3f8f2;
-  background-color: #3581b8;
-}
-
-.startQuiz:active,
-.startQuiz:focus {
-  background-color: #28648f;
 }
 
 .next,
@@ -79,47 +62,12 @@ button {
   color: #f3f8f2;
 }
 
-.startQuiz:hover,
 .next:hover,
 .prev:hover,
 .tryAgain:hover,
 .submit:hover,
 .backToMenu:hover {
   opacity: 0.6;
-}
-
-/* Intro Component
-========================== */
-h1 {
-  font-family: "Raleway", sans-serif;
-}
-h1 .title {
-  color: #fcb07e;
-}
-
-.subtext {
-  margin-bottom: 5em;
-  font-size: 0.8em;
-  font-weight: lighter;
-}
-
-.selector {
-  text-transform: uppercase;
-}
-.selector select {
-  outline: none;
-  width: 16em;
-  padding: 0.5em;
-  border: 0.5px solid #dee2d6;
-  font: lighter 0.8em "Open Sans", sans-serif;
-}
-
-.intro-container {
-  margin: 1em;
-}
-
-.side-svg-container {
-  display: none;
 }
 
 /* Quiz Component
@@ -292,52 +240,6 @@ h1 .title {
 /* MEDIA QUERIES
 ========================== */
 @media screen and (min-width: 850px) {
-  #root {
-    text-align: left;
-  }
-
-  /* Intro Component
-  ========================== */
-  .container,
-.intro-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex: 1;
-  }
-  .container .content-container h1,
-.intro-container .content-container h1 {
-    font-size: 3em;
-  }
-  .container .content-container .subtext,
-.intro-container .content-container .subtext {
-    margin-bottom: 3em;
-    font-size: 1.2em;
-  }
-  .container .content-container .selector,
-.intro-container .content-container .selector {
-    display: flex;
-    margin: 1em;
-    font-size: 1em;
-  }
-  .container .content-container .selector p,
-.intro-container .content-container .selector p {
-    flex-basis: 8em;
-  }
-  .container .content-container .selector select,
-.intro-container .content-container .selector select {
-    height: 3em;
-    width: 13em;
-    font-size: 1em;
-  }
-  .container .side-svg-container,
-.intro-container .side-svg-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-left: 1.5em;
-  }
-
   /* Quiz Component
   ========================== */
   .mainContainer {

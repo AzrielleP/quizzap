@@ -3,8 +3,8 @@ import React from 'react';
 function IntroSvg() {
     return (
         <svg
-          width="460"
-          height="331"
+          width="100%"
+          height="100%"
           viewBox="0 0 585 421"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"

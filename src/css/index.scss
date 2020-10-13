@@ -32,13 +32,6 @@ body {
   background-color: $white;
 }
 
-#root {
-  display: flex;
-  flex-flow: column;
-  justify-content: center;
-  text-align: center;
-}
-
 /* Buttons
 ========================== */
 
@@ -52,16 +45,6 @@ button {
   text-transform: uppercase;
   cursor: pointer;
   -webkit-tap-highlight-color: transparent;
-}
-
-.startQuiz {
-  color: $white;
-  background-color: $blue;
-}
-
-.startQuiz:active,
-.startQuiz:focus {
-  background-color: #28648f;
 }
 
 .next,
@@ -95,49 +78,12 @@ button {
   color: $white;
 }
 
-.startQuiz:hover,
 .next:hover,
 .prev:hover,
 .tryAgain:hover,
 .submit:hover,
 .backToMenu:hover {
   opacity: 0.6;
-}
-
-/* Intro Component
-========================== */
-
-// Text
-h1 {
-  font-family: $head-font;
-  .title {
-    color: $peach;
-  }
-}
-
-.subtext {
-  margin-bottom: 5em;
-  font-size: 0.8em;
-  font-weight: lighter;
-}
-
-.selector {
-  text-transform: uppercase;
-  select {
-    outline: none;
-    width: 16em;
-    padding: 0.5em;
-    border: 0.5px solid $gray;
-    font: lighter 0.8em $body-font;
-  }
-}
-
-.intro-container {
-  margin: 1em;
-}
-
-.side-svg-container {
-  display: none;
 }
 
 /* Quiz Component
@@ -314,48 +260,6 @@ h1 {
 /* MEDIA QUERIES
 ========================== */
 @media screen and (min-width: 850px) {
-  #root {
-    text-align: left;
-  }
-
-  /* Intro Component
-  ========================== */
-
-  .container,
-  .intro-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex: 1;
-    .content-container {
-      h1 {
-        font-size: 3em;
-      }
-      .subtext {
-        margin-bottom: 3em;
-        font-size: 1.2em;
-      }
-      .selector {
-        display: flex;
-        margin: 1em;
-        font-size: 1em;
-        p {
-          flex-basis: 8em;
-        }
-        select {
-          height: 3em;
-          width: 13em;
-          font-size: 1em;
-        }
-      }
-    }
-    .side-svg-container {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin-left: 1.5em;
-    }
-  }
 
   /* Quiz Component
   ========================== */
