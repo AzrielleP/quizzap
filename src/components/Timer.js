@@ -7,6 +7,7 @@ export default function Timer(props) {
   const { handleResult } = props;
 
   useEffect(() => {
+    // Create a time format of MM:SS
     const formatTime = () => {
       setTime({
         minutes: Math.floor((counter % 3600) / 60),
@@ -21,6 +22,7 @@ export default function Timer(props) {
       handleResult();
     }
 
+    // Use clearTimeout so that when the component unmounts, counter will no longer change.
     return () => clearTimeout(countdown);
   }, [counter, handleResult]);
 
