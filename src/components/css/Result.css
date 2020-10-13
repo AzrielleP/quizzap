@@ -1,0 +1,130 @@
+/* Setting up Variables
+========================== */
+/* Results Component
+========================== */
+.backToMenu {
+  margin-left: 1em;
+  background-color: #dee2d6;
+  font-weight: bold;
+}
+
+.backToMenu:active,
+.backToMenu:focus {
+  background-color: #b1b4aa;
+}
+
+.tryAgain {
+  background-color: #fcb07e;
+  color: #f3f8f2;
+}
+
+.tryAgain:hover,
+.backToMenu:hover {
+  opacity: 0.6;
+}
+
+.resultButtonContainer {
+  font-size: 0.9em;
+}
+
+.scoreContainer {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+}
+.scoreContainer p:first-child {
+  margin-bottom: 1em;
+  font-family: "Raleway", sans-serif;
+  text-transform: uppercase;
+}
+.scoreContainer .score {
+  display: inline-block;
+  margin: 0;
+  padding-bottom: 0.5em;
+  font: 700 3em "Open Sans", sans-serif;
+  text-transform: uppercase;
+}
+.scoreContainer .result {
+  font: 800 1.5em "Raleway", sans-serif;
+  margin-bottom: 0;
+}
+
+.reviewContainer {
+  margin: 1em 2em;
+}
+.reviewContainer .title {
+  margin-bottom: 1em;
+  font-family: "Raleway", sans-serif;
+  text-transform: uppercase;
+}
+.reviewContainer .quizReview {
+  list-style-type: none;
+  padding: 0;
+}
+.reviewContainer .quizReview .itemContainer {
+  display: flex;
+  align-items: center;
+  margin: 0.5em;
+}
+.reviewContainer .quizReview .itemContainer .checkContainer i {
+  margin-right: 0.5em;
+  font-size: 1.5em;
+}
+.reviewContainer .quizReview .itemContainer .item {
+  padding: 0 0.5em;
+}
+.reviewContainer .quizReview .itemContainer .item .itemQuestion {
+  font: 400 0.8em "Open Sans", sans-serif;
+  text-align: left;
+}
+.reviewContainer .quizReview .itemContainer .item .itemQuestion .answer {
+  margin-left: 0.5em;
+  text-transform: initial;
+  font-weight: bold;
+}
+
+.fa-times-circle {
+  color: rgba(21, 19, 19, 0.5);
+}
+
+.fa-check-circle {
+  font-weight: bold;
+  color: #3581b8;
+}
+
+@media screen and (min-width: 1024px) {
+  .resultsContainer {
+    display: flex;
+    align-items: center;
+  }
+  .resultsContainer .scoreContainer {
+    width: 50%;
+  }
+  .resultsContainer .reviewContainer {
+    width: 50%;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .tryAgain,
+.backToMenu {
+    font-size: 1.4em;
+  }
+
+  .scoreContainer p:first-child {
+    font-size: 24px;
+  }
+  .scoreContainer .score {
+    font-size: 5em;
+  }
+  .scoreContainer .result {
+    font-size: 2em;
+  }
+
+  .reviewContainer .quizReview .itemContainer .item .itemQuestion {
+    font-size: 1em;
+  }
+}
+
+/*# sourceMappingURL=Result.css.map */
