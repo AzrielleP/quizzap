@@ -79,7 +79,7 @@ function App() {
           handleDataFetch={handleDataFetch}
           question={question}
           category={category}
-          difficulty = {difficulty}
+          difficulty={difficulty}
         />
       )}
       {result && (
