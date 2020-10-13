@@ -21,7 +21,6 @@ body {
   display: flex;
   flex-flow: column;
   justify-content: center;
-  height: 100vh;
   text-align: center;
 }
 
@@ -234,24 +233,56 @@ h1 .title {
 
 /* Result Component
 ========================== */
-.resultsContainer {
+.scoreContainer {
   text-align: center;
 }
-.resultsContainer p:first-child {
+.scoreContainer p:first-child {
   margin-bottom: 1em;
   font-family: "Raleway", sans-serif;
   text-transform: uppercase;
 }
-.resultsContainer .score {
+.scoreContainer .score {
   display: inline-block;
   margin: 0;
-  padding: 1em 0.8em;
-  border: 20px solid #3581b8;
-  border-radius: 50%;
-  font: 700 4em "Open Sans", sans-serif;
+  padding-bottom: 0.5em;
+  font: 700 3em "Open Sans", sans-serif;
+  text-transform: uppercase;
 }
-.resultsContainer .result {
-  font: 800 2.5em "Raleway", sans-serif;
+.scoreContainer .result {
+  font: 800 1.5em "Raleway", sans-serif;
+  margin-bottom: 0;
+}
+
+.quizReview {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.quizReview .itemContainer {
+  display: flex;
+  align-items: center;
+  border: 1px solid rgba(21, 19, 19, 0.8);
+  border-radius: 10px;
+  width: 20em;
+  margin: 0.5em;
+}
+.quizReview .itemContainer .checkContainer {
+  background-color: #3581b8;
+}
+.quizReview .itemContainer .item {
+  padding: 0 0.5em;
+}
+.quizReview .itemContainer .item .itemQuestion {
+  font: 400 0.7em "Open Sans", sans-serif;
+  text-align: left;
+}
+.quizReview .itemContainer .item .userAnswer {
+  text-transform: uppercase;
+  font-size: 0.6em;
+}
+.quizReview .itemContainer .item .userAnswer .answer {
+  text-transform: initial;
+  font-weight: bold;
 }
 
 .resultButtonContainer {
@@ -343,6 +374,9 @@ h1 .title {
   .progressAndTimerContainer .progressBar .progressStatus {
     font-size: 0.8em;
   }
+
+  /* Results Component
+  ========================== */
 }
 
 /*# sourceMappingURL=index.css.map */
